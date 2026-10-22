@@ -1,0 +1,43 @@
+# Python virtual environments
+.venv/
+venv/
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# IDE configuration
+.idea/
+.vscode/
+
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Large genomic data
+*.hic
+*.cool
+*.mcool
+*.bam
+*.cram
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+
+# Local experimental datasets
+data/raw/
+data/interim/
+data/processed/
+
+# Local logs and temporary files
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
