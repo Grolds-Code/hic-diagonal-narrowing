@@ -4,6 +4,9 @@ Population targets are derived from the synthetic generative model.
 Results are not claims about biological Hi-C confidence intervals.
 """
 
+import csv
+from pathlib import Path
+
 import numpy as np
 
 from hic_diagonal_narrowing.synthetic import simulate_contact_map
@@ -55,6 +58,7 @@ def thin_matrix(matrix, depth, rng):
 
 
 def main():
+    trial_records = []
     assert population_w80("baseline") == 28
     assert population_w80("narrowing") == 9
     assert population_w80("coverage_drop") == 28
@@ -115,6 +119,22 @@ def main():
 
                 record["contacts"].append(contacts)
 
+                trial = {
+                    "scenario": scenario,
+                    "depth": depth,
+                    "replicate": replicate,
+                    "population_w80_bins": truth,
+                    "contact_count": contacts,
+                    "valid": False,
+                    "observed_w80_bins": "",
+                    "lower_bins": "",
+                    "upper_bins": "",
+                    "bootstrap_std_bins": "",
+                    "covered": "",
+                    "singleton": "",
+                    "failure_reason": "",
+                }
+
                 try:
                     estimate = bootstrap_w80(
                         thinned,
@@ -126,7 +146,9 @@ def main():
                         + depth_index * 1000
                         + replicate,
                     )
-                except ValueError:
+                except ValueError as exc:
+                    trial["failure_reason"] = str(exc)
+                    trial_records.append(trial)
                     continue
 
                 lower = estimate["bootstrap_lower"]
@@ -142,6 +164,17 @@ def main():
                 record["errors"].append(
                     abs(observed - truth)
                 )
+
+                trial.update({
+                    "valid": True,
+                    "observed_w80_bins": observed,
+                    "lower_bins": lower,
+                    "upper_bins": upper,
+                    "bootstrap_std_bins": estimate["bootstrap_std"],
+                    "covered": lower <= truth <= upper,
+                    "singleton": lower == upper,
+                })
+                trial_records.append(trial)
 
         for depth in DEPTHS:
             record = results[depth]
@@ -174,6 +207,26 @@ def main():
 
         print()
 
+    output = Path(
+        "research_artifacts/stage1/bootstrap_calibration_trials.csv"
+    )
+    output.parent.mkdir(parents=True, exist_ok=True)
+
+    assert len(trial_records) == (
+        len(SCENARIOS) * len(DEPTHS) * N_REPLICATES
+    )
+
+    with output.open("w", newline="") as f:
+        writer = csv.DictWriter(
+            f,
+            fieldnames=list(trial_records[0]),
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        writer.writerows(trial_records)
+
+    print(f"PASS: Saved {len(trial_records)} calibration trials")
+    print(f"Output: {output}")
     print("Bootstrap calibration experiment: COMPLETE")
     print("Coverage and singleton rates exclude invalid estimates.")
     print("Failures must be assessed separately.")
