@@ -1,0 +1,22 @@
+{
+  "source_dataset": "hct116_chr10_20000000_21000000_500bp_midpoint_32kb",
+  "source_sha256": "fb01bc848b4fecb342a450b8d87165393a89de019fc27c82e72d8519c07f5de5",
+  "output_sha256": "b9205d00020568e038be3bbb42dfde3644d00cb86dcff127c1ea7f0abedf662f",
+  "chromosome": "chr10",
+  "start_bp": 20000000,
+  "end_bp_exclusive": 21000000,
+  "resolution_bp": 500,
+  "window_bins": 64,
+  "step_bins": 16,
+  "max_separation_bins": 64,
+  "w80_definition": "Smallest positive separation bin (1-64) accumulating >=80% of off-diagonal per-separation mean observed contact intensity",
+  "normalization": "NONE",
+  "analysis_version": "v2_offdiag",
+  "diagonal_policy": "excluded",
+  "reference_equivalence": "122_of_122_verified",
+  "missing_bin_status": "not_assessed",
+  "qc_status": "unassessed",
+  "interpretation": "exploratory_not_significance_tested",
+  "window_count": 122,
+  "valid_w80_windows": 122
+}
