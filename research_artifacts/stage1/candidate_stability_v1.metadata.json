@@ -1,0 +1,113 @@
+{
+  "experiment": "candidate_score_under_joint_contact_thinning",
+  "source_sha256": "fb01bc848b4fecb342a450b8d87165393a89de019fc27c82e72d8519c07f5de5",
+  "profile_sha256": "b9205d00020568e038be3bbb42dfde3644d00cb86dcff127c1ea7f0abedf662f",
+  "output_sha256": "628467cbc3d2742c6b82ffb441589de5e10cc47807046d04482a30490b6f31ef",
+  "threshold": 0.2,
+  "seed": 20261024,
+  "replicates_per_depth": 100,
+  "retentions": [
+    0.25,
+    0.1
+  ],
+  "baseline_called_windows": 5,
+  "baseline_regions": [
+    [
+      20296000,
+      20336000
+    ],
+    [
+      20720000,
+      20792000
+    ]
+  ],
+  "summaries": [
+    {
+      "retention": 0.25,
+      "replicates": 100,
+      "median_called_windows": 10.0,
+      "median_newly_called_windows": 7.0,
+      "median_merged_regions": 4.0,
+      "region_persistence": [
+        0.66,
+        0.97
+      ],
+      "baseline_window_persistence": [
+        {
+          "start_bp": 20296000,
+          "end_bp": 20328000,
+          "baseline_w80_bins": 14,
+          "retention_fraction": 0.51
+        },
+        {
+          "start_bp": 20304000,
+          "end_bp": 20336000,
+          "baseline_w80_bins": 14,
+          "retention_fraction": 0.52
+        },
+        {
+          "start_bp": 20720000,
+          "end_bp": 20752000,
+          "baseline_w80_bins": 14,
+          "retention_fraction": 0.71
+        },
+        {
+          "start_bp": 20736000,
+          "end_bp": 20768000,
+          "baseline_w80_bins": 13,
+          "retention_fraction": 0.94
+        },
+        {
+          "start_bp": 20760000,
+          "end_bp": 20792000,
+          "baseline_w80_bins": 14,
+          "retention_fraction": 0.65
+        }
+      ]
+    },
+    {
+      "retention": 0.1,
+      "replicates": 100,
+      "median_called_windows": 19.0,
+      "median_newly_called_windows": 16.0,
+      "median_merged_regions": 7.0,
+      "region_persistence": [
+        0.55,
+        0.94
+      ],
+      "baseline_window_persistence": [
+        {
+          "start_bp": 20296000,
+          "end_bp": 20328000,
+          "baseline_w80_bins": 14,
+          "retention_fraction": 0.5
+        },
+        {
+          "start_bp": 20304000,
+          "end_bp": 20336000,
+          "baseline_w80_bins": 14,
+          "retention_fraction": 0.43
+        },
+        {
+          "start_bp": 20720000,
+          "end_bp": 20752000,
+          "baseline_w80_bins": 14,
+          "retention_fraction": 0.62
+        },
+        {
+          "start_bp": 20736000,
+          "end_bp": 20768000,
+          "baseline_w80_bins": 13,
+          "retention_fraction": 0.86
+        },
+        {
+          "start_bp": 20760000,
+          "end_bp": 20792000,
+          "baseline_w80_bins": 14,
+          "retention_fraction": 0.57
+        }
+      ]
+    }
+  ],
+  "interpretation": "Conditional technical sensitivity; threshold selected exploratorily; not biological replication or significance"
+}
