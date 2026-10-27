@@ -1,7 +1,7 @@
 [project]
 name = "hic-diagonal-narrowing"
 version = "0.1.0"
-description = "Add your description here"
+description = "Research framework for local Hi-C contact-width estimation and artifact-aware narrowing analysis"
 readme = "README.md"
 authors = [
     { name = "Grold Otieno", email = "groldotieno97@gmail.com" }
