@@ -1,0 +1,84 @@
+{
+  "experiment": "conditional_binomial_contact_thinning",
+  "source": "hct116_chr10_20000000_21000000_500bp_midpoint_32kb",
+  "source_sha256": "fb01bc848b4fecb342a450b8d87165393a89de019fc27c82e72d8519c07f5de5",
+  "reference_profile": "hct116_chr10_20000000_21000000_500bp_midpoint_32kb_w80_profile_v2_offdiag",
+  "reference_sha256": "b9205d00020568e038be3bbb42dfde3644d00cb86dcff127c1ea7f0abedf662f",
+  "output_sha256": "ce3cc1daf85639410b279180695317445aac4c82e9d049a6d78e3de2a9a06537",
+  "seed": 20261023,
+  "replicates_per_depth": 100,
+  "retention_fractions": [
+    0.5,
+    0.25,
+    0.1,
+    0.05,
+    0.01
+  ],
+  "genomic_windows": 122,
+  "w80_definition": "off_diagonal_separations_1_to_64",
+  "units": "500_bp_per_bin",
+  "missing_bin_status": "not_assessed",
+  "interpretation": "Technical sensitivity conditional on observed counts; not biological replication or calibrated confidence intervals",
+  "summaries": [
+    {
+      "retention": 0.5,
+      "replicates": 100,
+      "total_window_evaluations": 12200,
+      "valid_evaluations": 12200,
+      "invalid_evaluations": 0,
+      "median_absolute_error_bins": 1.0,
+      "fraction_exact": 0.48860655737704917,
+      "fraction_within_one_bin": 0.9201639344262295,
+      "fraction_narrower_by_two_or_more_bins": 0.04319672131147541,
+      "fraction_wider_by_two_or_more_bins": 0.03663934426229508
+    },
+    {
+      "retention": 0.25,
+      "replicates": 100,
+      "total_window_evaluations": 12200,
+      "valid_evaluations": 12200,
+      "invalid_evaluations": 0,
+      "median_absolute_error_bins": 1.0,
+      "fraction_exact": 0.315327868852459,
+      "fraction_within_one_bin": 0.7454918032786885,
+      "fraction_narrower_by_two_or_more_bins": 0.1309016393442623,
+      "fraction_wider_by_two_or_more_bins": 0.12360655737704918
+    },
+    {
+      "retention": 0.1,
+      "replicates": 100,
+      "total_window_evaluations": 12200,
+      "valid_evaluations": 12200,
+      "invalid_evaluations": 0,
+      "median_absolute_error_bins": 1.0,
+      "fraction_exact": 0.18918032786885247,
+      "fraction_within_one_bin": 0.5086065573770492,
+      "fraction_narrower_by_two_or_more_bins": 0.25278688524590165,
+      "fraction_wider_by_two_or_more_bins": 0.23860655737704917
+    },
+    {
+      "retention": 0.05,
+      "replicates": 100,
+      "total_window_evaluations": 12200,
+      "valid_evaluations": 12200,
+      "invalid_evaluations": 0,
+      "median_absolute_error_bins": 2.0,
+      "fraction_exact": 0.13434426229508198,
+      "fraction_within_one_bin": 0.37959016393442624,
+      "fraction_narrower_by_two_or_more_bins": 0.3168032786885246,
+      "fraction_wider_by_two_or_more_bins": 0.30360655737704917
+    },
+    {
+      "retention": 0.01,
+      "replicates": 100,
+      "total_window_evaluations": 12200,
+      "valid_evaluations": 12200,
+      "invalid_evaluations": 0,
+      "median_absolute_error_bins": 5.0,
+      "fraction_exact": 0.060163934426229505,
+      "fraction_within_one_bin": 0.17344262295081966,
+      "fraction_narrower_by_two_or_more_bins": 0.44434426229508195,
+      "fraction_wider_by_two_or_more_bins": 0.38221311475409836
+    }
+  ]
+}
