@@ -14,30 +14,59 @@ def summarize_local_support(
     region: tuple[int, int],
     *,
     max_separation_bins: int = 64,
+    valid_bins: np.ndarray | None = None,
 ) -> dict:
     """Summarize contact support for a genomic window.
 
     Contacts are assigned to the region by their midpoint.
     Only unique upper-triangle, off-diagonal pairs are used.
 
-    This version assumes a complete matrix without explicit
-    missing-bin masks.
+    If valid_bins is provided, only pairs whose two endpoint
+    bins are valid contribute to contact-support statistics.
+
+    True means valid; False means excluded. The mask does not
+    automatically establish biological or technical reliability.
     """
     matrix = np.asarray(matrix)
 
     if matrix.ndim != 2 or matrix.shape[0] != matrix.shape[1]:
         raise ValueError("Matrix must be square")
 
-    if not np.all(np.isfinite(matrix)):
-        raise ValueError("Matrix contains non-finite values")
-
-    if np.any(matrix < 0):
-        raise ValueError("Matrix contains negative values")
-
-    if not np.allclose(matrix, matrix.T):
-        raise ValueError("Matrix must be symmetric")
-
     n_bins = matrix.shape[0]
+
+    if valid_bins is None:
+        valid_bins = np.ones(n_bins, dtype=bool)
+    else:
+        valid_bins = np.asarray(valid_bins)
+
+        if valid_bins.shape != (n_bins,):
+            raise ValueError(
+                "valid_bins must contain one value per genomic bin"
+            )
+
+        if valid_bins.dtype != np.dtype(bool):
+            raise ValueError("valid_bins must be a boolean array")
+
+    # Validate only contacts between explicitly valid bins.
+    # Invalid bins may contain NaN because they are excluded.
+    valid_idx = np.flatnonzero(valid_bins)
+    valid_matrix = matrix[np.ix_(valid_idx, valid_idx)]
+
+    if not np.all(np.isfinite(valid_matrix)):
+        raise ValueError(
+            "Valid genomic bins contain non-finite values"
+        )
+
+    if np.any(valid_matrix < 0):
+        raise ValueError(
+            "Valid genomic bins contain negative values"
+        )
+
+    if not np.allclose(valid_matrix, valid_matrix.T):
+        raise ValueError(
+            "Contacts between valid bins must be symmetric"
+        )
+
     start, end = region
 
     if not (0 <= start < end <= n_bins):
@@ -59,6 +88,8 @@ def summarize_local_support(
         selected = (
             (midpoints >= start)
             & (midpoints < end)
+            & valid_bins[rows]
+            & valid_bins[rows + distance]
         )
 
         if not np.any(selected):
