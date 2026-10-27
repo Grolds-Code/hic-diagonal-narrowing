@@ -1,0 +1,454 @@
+{
+  "study": "HCT116 independent Umap-mask W80 sensitivity",
+  "assembly": "GRCh38",
+  "chromosome": "chr10",
+  "region": [
+    20000000,
+    21000000
+  ],
+  "resolution_bp": 500,
+  "source_sha256": "fb01bc848b4fecb342a450b8d87165393a89de019fc27c82e72d8519c07f5de5",
+  "profile_sha256": "b9205d00020568e038be3bbb42dfde3644d00cb86dcff127c1ea7f0abedf662f",
+  "mask_rule": "mean_500bp_Umap_below_threshold",
+  "omitted_umap_values": "interpreted_as_zero",
+  "distance_normalization": "mean_contact_count_over_remaining_valid_pairs",
+  "baseline": [
+    {
+      "region": "Region A",
+      "peak_interval": [
+        20296000,
+        20328000
+      ],
+      "peak_w80_bins": 14,
+      "control_w80_bins": [
+        17,
+        17,
+        18,
+        18,
+        17
+      ],
+      "reference_median_w80_bins": 17.0,
+      "matched_narrowing_score": 0.2801079191927352,
+      "peak_masked_bins": 0,
+      "peak_removed_pair_fraction": 0.0,
+      "peak_minimum_valid_pairs": 64,
+      "control_masked_bins": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "region": "Region B",
+      "peak_interval": [
+        20736000,
+        20768000
+      ],
+      "peak_w80_bins": 13,
+      "control_w80_bins": [
+        15,
+        16,
+        17,
+        17,
+        18
+      ],
+      "reference_median_w80_bins": 17.0,
+      "matched_narrowing_score": 0.38702312310924725,
+      "peak_masked_bins": 0,
+      "peak_removed_pair_fraction": 0.0,
+      "peak_minimum_valid_pairs": 64,
+      "control_masked_bins": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "tracks": {
+    "k50": {
+      "url": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/hoffmanMappability/k50.Umap.MultiTrackMappability.bw",
+      "bedgraph_sha256": "86e4cac78ca294f885ceb93338750f64f6416174e45976d306a8d17fedcf17d4",
+      "source_intervals": 56114,
+      "reported_base_fraction": 0.971748,
+      "zero_filled_mean_mappability": 0.9365530014038086,
+      "bin_coverage_consistency": 0.9717480000000001,
+      "scenarios": [
+        {
+          "validity_threshold": 0.5,
+          "masked_bins_across_1mb": 105,
+          "comparisons": [
+            {
+              "region": "Region A",
+              "peak_interval": [
+                20296000,
+                20328000
+              ],
+              "peak_w80_bins": 15,
+              "control_w80_bins": [
+                16,
+                16,
+                19,
+                18,
+                16
+              ],
+              "reference_median_w80_bins": 16.0,
+              "matched_narrowing_score": 0.09310940439148145,
+              "peak_masked_bins": 2,
+              "peak_removed_pair_fraction": 0.158935546875,
+              "peak_minimum_valid_pairs": 50,
+              "control_masked_bins": [
+                6,
+                14,
+                12,
+                4,
+                13
+              ]
+            },
+            {
+              "region": "Region B",
+              "peak_interval": [
+                20736000,
+                20768000
+              ],
+              "peak_w80_bins": 15,
+              "control_w80_bins": [
+                16,
+                16,
+                17,
+                17,
+                18
+              ],
+              "reference_median_w80_bins": 17.0,
+              "matched_narrowing_score": 0.18057224564182084,
+              "peak_masked_bins": 12,
+              "peak_removed_pair_fraction": 0.328857421875,
+              "peak_minimum_valid_pairs": 40,
+              "control_masked_bins": [
+                0,
+                0,
+                0,
+                1,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "validity_threshold": 0.8,
+          "masked_bins_across_1mb": 185,
+          "comparisons": [
+            {
+              "region": "Region A",
+              "peak_interval": [
+                20296000,
+                20328000
+              ],
+              "peak_w80_bins": 16,
+              "control_w80_bins": [
+                17,
+                16,
+                19,
+                18,
+                16
+              ],
+              "reference_median_w80_bins": 17.0,
+              "matched_narrowing_score": 0.0874628412503394,
+              "peak_masked_bins": 4,
+              "peak_removed_pair_fraction": 0.25146484375,
+              "peak_minimum_valid_pairs": 41,
+              "control_masked_bins": [
+                14,
+                19,
+                13,
+                7,
+                18
+              ]
+            },
+            {
+              "region": "Region B",
+              "peak_interval": [
+                20736000,
+                20768000
+              ],
+              "peak_w80_bins": 15,
+              "control_w80_bins": [
+                16,
+                15,
+                17,
+                17,
+                17
+              ],
+              "reference_median_w80_bins": 17.0,
+              "matched_narrowing_score": 0.18057224564182084,
+              "peak_masked_bins": 13,
+              "peak_removed_pair_fraction": 0.3515625,
+              "peak_minimum_valid_pairs": 38,
+              "control_masked_bins": [
+                2,
+                5,
+                2,
+                3,
+                4
+              ]
+            }
+          ]
+        },
+        {
+          "validity_threshold": 0.95,
+          "masked_bins_across_1mb": 373,
+          "comparisons": [
+            {
+              "region": "Region A",
+              "peak_interval": [
+                20296000,
+                20328000
+              ],
+              "peak_w80_bins": 16,
+              "control_w80_bins": [
+                18,
+                16,
+                18,
+                18,
+                16
+              ],
+              "reference_median_w80_bins": 18.0,
+              "matched_narrowing_score": 0.16992500144231237,
+              "peak_masked_bins": 8,
+              "peak_removed_pair_fraction": 0.337890625,
+              "peak_minimum_valid_pairs": 36,
+              "control_masked_bins": [
+                16,
+                26,
+                16,
+                19,
+                23
+              ]
+            },
+            {
+              "region": "Region B",
+              "peak_interval": [
+                20736000,
+                20768000
+              ],
+              "peak_w80_bins": 15,
+              "control_w80_bins": [
+                16,
+                15,
+                17,
+                17,
+                17
+              ],
+              "reference_median_w80_bins": 17.0,
+              "matched_narrowing_score": 0.18057224564182084,
+              "peak_masked_bins": 16,
+              "peak_removed_pair_fraction": 0.422119140625,
+              "peak_minimum_valid_pairs": 33,
+              "control_masked_bins": [
+                4,
+                13,
+                11,
+                13,
+                12
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "k100": {
+      "url": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/hoffmanMappability/k100.Umap.MultiTrackMappability.bw",
+      "bedgraph_sha256": "32e95f06830e0fefe2d4058fbe36242a87d667138167f50d9bd98cfb23a92774",
+      "source_intervals": 23583,
+      "reported_base_fraction": 0.993403,
+      "zero_filled_mean_mappability": 0.9798849821090698,
+      "bin_coverage_consistency": 0.993403,
+      "scenarios": [
+        {
+          "validity_threshold": 0.5,
+          "masked_bins_across_1mb": 21,
+          "comparisons": [
+            {
+              "region": "Region A",
+              "peak_interval": [
+                20296000,
+                20328000
+              ],
+              "peak_w80_bins": 14,
+              "control_w80_bins": [
+                17,
+                16,
+                18,
+                18,
+                17
+              ],
+              "reference_median_w80_bins": 17.0,
+              "matched_narrowing_score": 0.2801079191927352,
+              "peak_masked_bins": 0,
+              "peak_removed_pair_fraction": 0.0,
+              "peak_minimum_valid_pairs": 64,
+              "control_masked_bins": [
+                0,
+                3,
+                6,
+                0,
+                0
+              ]
+            },
+            {
+              "region": "Region B",
+              "peak_interval": [
+                20736000,
+                20768000
+              ],
+              "peak_w80_bins": 14,
+              "control_w80_bins": [
+                16,
+                16,
+                17,
+                17,
+                18
+              ],
+              "reference_median_w80_bins": 17.0,
+              "matched_narrowing_score": 0.2801079191927352,
+              "peak_masked_bins": 9,
+              "peak_removed_pair_fraction": 0.251220703125,
+              "peak_minimum_valid_pairs": 46,
+              "control_masked_bins": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "validity_threshold": 0.8,
+          "masked_bins_across_1mb": 74,
+          "comparisons": [
+            {
+              "region": "Region A",
+              "peak_interval": [
+                20296000,
+                20328000
+              ],
+              "peak_w80_bins": 15,
+              "control_w80_bins": [
+                16,
+                16,
+                19,
+                18,
+                16
+              ],
+              "reference_median_w80_bins": 16.0,
+              "matched_narrowing_score": 0.09310940439148145,
+              "peak_masked_bins": 1,
+              "peak_removed_pair_fraction": 0.108642578125,
+              "peak_minimum_valid_pairs": 54,
+              "control_masked_bins": [
+                5,
+                7,
+                11,
+                3,
+                7
+              ]
+            },
+            {
+              "region": "Region B",
+              "peak_interval": [
+                20736000,
+                20768000
+              ],
+              "peak_w80_bins": 15,
+              "control_w80_bins": [
+                16,
+                16,
+                17,
+                17,
+                18
+              ],
+              "reference_median_w80_bins": 17.0,
+              "matched_narrowing_score": 0.18057224564182084,
+              "peak_masked_bins": 13,
+              "peak_removed_pair_fraction": 0.3515625,
+              "peak_minimum_valid_pairs": 38,
+              "control_masked_bins": [
+                0,
+                0,
+                0,
+                1,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "validity_threshold": 0.95,
+          "masked_bins_across_1mb": 136,
+          "comparisons": [
+            {
+              "region": "Region A",
+              "peak_interval": [
+                20296000,
+                20328000
+              ],
+              "peak_w80_bins": 16,
+              "control_w80_bins": [
+                16,
+                16,
+                19,
+                18,
+                16
+              ],
+              "reference_median_w80_bins": 16.0,
+              "matched_narrowing_score": 0.0,
+              "peak_masked_bins": 3,
+              "peak_removed_pair_fraction": 0.205078125,
+              "peak_minimum_valid_pairs": 46,
+              "control_masked_bins": [
+                10,
+                15,
+                12,
+                4,
+                16
+              ]
+            },
+            {
+              "region": "Region B",
+              "peak_interval": [
+                20736000,
+                20768000
+              ],
+              "peak_w80_bins": 15,
+              "control_w80_bins": [
+                16,
+                16,
+                17,
+                17,
+                17
+              ],
+              "reference_median_w80_bins": 17.0,
+              "matched_narrowing_score": 0.18057224564182084,
+              "peak_masked_bins": 13,
+              "peak_removed_pair_fraction": 0.3515625,
+              "peak_minimum_valid_pairs": 38,
+              "control_masked_bins": [
+                0,
+                1,
+                1,
+                4,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "limitations": "Read lengths are hypothetical; thresholds are sensitivity settings; missing-bin identity and biological significance are not established."
+}
