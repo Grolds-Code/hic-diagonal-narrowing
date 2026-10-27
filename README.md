@@ -98,7 +98,7 @@ Reference-width estimation:
 ```math
 W_{80}^{\mathrm{ref}}(W)
 =
-\operatorname{median}_{V\in\mathcal{R}(W)}
+\mathrm{median}_{V\in\mathcal{R}(W)}
 W_{80}(V)
 ```
 
