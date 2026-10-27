@@ -27,8 +27,6 @@ Mean contact intensity is calculated at each genomic separation using the number
 
 The primary width statistic, W80, is the smallest genomic separation at which the cumulative mean contact intensity reaches 80% of the total within the analyzed separation range.
 
-A smaller W80 indicates greater concentration of observed contact intensity at short genomic separations.
-
 **Current implementation:** The core `estimate_w80()` function assumes
 a complete, symmetric, nonnegative contact matrix. It does not currently
 accept missing-bin or mappability masks. Mask-aware analyses are
@@ -38,24 +36,111 @@ The function accepts half-open genomic windows expressed in bin indices
 and returns W80 in bins. Multiplication by the bin resolution converts
 the result into base pairs.
 
-
 ### 2.1 Mathematical Definitions
 
-For genomic window W and separation d, let P_W(d) denote the set of valid contact pairs assigned to W.
+For a zero-based, half-open genomic window $W=[a,b)$ expressed in bin coordinates, eligible contact pairs at separation $d$ are defined as:
+
+$$
+P_W(d)=\left\{(i,j)\;\middle|\;0\le i<j<n,\quad j-i=d,\quad a\le\frac{i+j}{2}<b\right\}
+$$
+
+**where:**
+
+- $n$ is the total number of genomic bins in the contact matrix.
+- $i$ and $j$ are genomic bin indices, with $i<j$ to count each undirected pair once.
+- $d=j-i$ is the genomic separation in bins.
+- $a$ and $b$ define the half-open analysis window.
+- $(i+j)/2$ is the contact pair's genomic midpoint.
+
+The current unmasked implementation treats all such pairs as eligible. Mask-aware experiments additionally exclude pairs whose endpoints fail the specified validity mask.
 
 Mean contact intensity:
 
-    m_W(d) = sum(C(i,j) for (i,j) in P_W(d)) / |P_W(d)|
+$$
+m_W(d) = \frac{\sum_{(i,j)\in P_W(d)} C(i,j)}{|P_W(d)|}
+$$
+
+**where:**
+
+- $m_W(d)$ is the mean observed contact intensity at separation $d$ within genomic window $W$.
+- $W$ is the genomic analysis window.
+- $d$ is genomic separation measured in bins.
+- $C(i,j)$ is the observed Hi-C contact count between bins $i$ and $j$.
+- $P_W(d)$ is the set of eligible contact pairs at separation $d$, assigned to $W$ by their genomic midpoints.
+- $|P_W(d)|$ is the number of eligible pairs, including pairs with zero observed contacts.
+
+**Interpretation:** Dividing by the number of eligible pairs accounts for differences in pair availability across genomic separations.
 
 Local diagonal width:
 
-    W80(W) = min {D : sum(m_W(d), d <= D) / sum(m_W(d), d <= D_max) >= 0.80}
+$$
+F_W(D) = \frac{\sum_{d=1}^{D}m_W(d)}{\sum_{d=1}^{D_{\max}}m_W(d)}
+$$
+
+$$
+W_{80}(W) = \min\left\{D : F_W(D) \geq 0.80\right\}
+$$
+
+**where:**
+
+- $F_W(D)$ is the cumulative fraction of mean contact intensity up to separation $D$.
+- $D$ is a candidate genomic separation, measured in bins.
+- $D_{\max}$ is the maximum analyzed separation.
+- $m_W(d)$ is the mean contact intensity at separation $d$.
+- $W_{80}(W)$ is the smallest separation at which at least 80% of the total mean contact intensity has accumulated.
+
+**Interpretation:** A smaller W80 indicates that observed contact intensity is more concentrated at shorter genomic separations.
+
+**Assumptions:** The total mean contact intensity must be positive, and each analyzed separation must have eligible contact pairs. The estimator returns W80 in bins; multiplying by genomic resolution converts it to base pairs.
+
+Reference-width estimation:
+
+$$
+W_{80}^{\mathrm{ref}}(W)
+=
+\operatorname{median}_{V\in\mathcal{R}(W)}
+W_{80}(V)
+$$
+
+**where:**
+
+- $\mathcal{R}(W)$ is the set of eligible reference windows.
+- $V$ denotes a reference window on the same chromosome as $W$.
+- $W_{80}(V)$ is the estimated width of reference window $V$.
+- $W_{80}^{\mathrm{ref}}(W)$ is the median reference width.
+
+In the current detector, reference windows must not overlap
+the target window. They must have finite, positive W80
+values, positive contact signal, and `qc_status = "unassessed"`.
+
+At least three eligible reference windows are required by
+default. Reference windows may overlap one another and are
+not automatically matched for sequencing coverage.
 
 Relative narrowing score:
 
-    S(W) = log2(W80_reference / W80_local)
+$$
+S(W) = \log_2\left(
+\frac{W_{80}^{\mathrm{ref}}(W)}{W_{80}(W)}
+\right)
+$$
 
-Positive scores indicate narrowing relative to the selected reference. Scores are descriptive unless supported by calibrated statistical inference.
+**where:**
+
+- $S(W)$ is the relative narrowing score for genomic window $W$.
+- $W_{80}(W)$ is the local diagonal width.
+- $W_{80}^{\mathrm{ref}}(W)$ is the reference width.
+- $\log_2$ denotes the base-2 logarithm.
+
+**Interpretation:**
+
+- $S(W) > 0$: local narrowing relative to the reference.
+- $S(W) = 0$: equal local and reference widths.
+- $S(W) < 0$: local widening relative to the reference.
+
+**Assumptions:** Both widths must be positive and expressed
+in the same units. The score is descriptive and does not
+constitute a statistical significance measure.
 
 ## 3. Software Architecture
 
