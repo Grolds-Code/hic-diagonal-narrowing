@@ -71,5 +71,70 @@ class TestW80(unittest.TestCase):
         self.assertEqual(result, 4)
 
 
+
+    def test_w80_excludes_invalid_bin_pairs(self):
+        """Masked contacts must not contribute to W80."""
+        matrix = np.zeros((6, 6), dtype=float)
+
+        matrix[0, 1] = matrix[1, 0] = 60
+        matrix[1, 3] = matrix[3, 1] = 10
+
+        # The strong adjacent contact makes unmasked W80 = 1.
+        unmasked = estimate_w80(
+            matrix,
+            (0, 6),
+            max_separation_bins=2,
+        )
+        self.assertEqual(unmasked, 1)
+
+        # Bin 0 is invalid. Its contacts must be excluded.
+        valid_bins = np.array(
+            [False, True, True, True, True, True]
+        )
+
+        masked = estimate_w80(
+            matrix,
+            (0, 6),
+            max_separation_bins=2,
+            valid_bins=valid_bins,
+        )
+
+        self.assertEqual(masked, 2)
+
+
+
+    def test_missing_distance_band_is_not_zero_signal(self):
+        """Distinguish observed zero contacts from missing support."""
+        matrix = np.zeros((6, 6), dtype=float)
+
+        matrix[0, 1] = matrix[1, 0] = 20
+
+        # Separation 2 has eligible pairs but zero contacts.
+        # This is a valid observation.
+        result = estimate_w80(
+            matrix,
+            (0, 6),
+            max_separation_bins=2,
+        )
+        self.assertEqual(result, 1)
+
+        # Only bins 0 and 1 remain valid.
+        # Separation 2 now has no eligible pairs at all.
+        valid_bins = np.array(
+            [True, True, False, False, False, False]
+        )
+
+        with self.assertRaisesRegex(
+            ValueError,
+            "No eligible pairs at separation 2",
+        ):
+            estimate_w80(
+                matrix,
+                (0, 6),
+                max_separation_bins=2,
+                valid_bins=valid_bins,
+            )
+
+
 if __name__ == "__main__":
     unittest.main()
