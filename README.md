@@ -40,9 +40,9 @@ the result into base pairs.
 
 For a zero-based, half-open genomic window $W=[a,b)$ expressed in bin coordinates, eligible contact pairs at separation $d$ are defined as:
 
-$$
-P_W(d)=\left\{(i,j)\;\middle|\;0\le i<j<n,\quad j-i=d,\quad a\le\frac{i+j}{2}<b\right\}
-$$
+```math
+P_W(d)=\{(i,j)\mid\;0\le i<j<n,\quad j-i=d,\quad a\le\frac{i+j}{2}<b\}
+```
 
 **where:**
 
@@ -56,9 +56,9 @@ The current unmasked implementation treats all such pairs as eligible. Mask-awar
 
 Mean contact intensity:
 
-$$
+```math
 m_W(d) = \frac{\sum_{(i,j)\in P_W(d)} C(i,j)}{|P_W(d)|}
-$$
+```
 
 **where:**
 
@@ -73,13 +73,13 @@ $$
 
 Local diagonal width:
 
-$$
+```math
 F_W(D) = \frac{\sum_{d=1}^{D}m_W(d)}{\sum_{d=1}^{D_{\max}}m_W(d)}
-$$
+```
 
-$$
-W_{80}(W) = \min\left\{D : F_W(D) \geq 0.80\right\}
-$$
+```math
+W_{80}(W) = \min\{D : F_W(D) \geq 0.80\}
+```
 
 **where:**
 
@@ -95,12 +95,12 @@ $$
 
 Reference-width estimation:
 
-$$
+```math
 W_{80}^{\mathrm{ref}}(W)
 =
 \operatorname{median}_{V\in\mathcal{R}(W)}
 W_{80}(V)
-$$
+```
 
 **where:**
 
@@ -119,11 +119,11 @@ not automatically matched for sequencing coverage.
 
 Relative narrowing score:
 
-$$
+```math
 S(W) = \log_2\left(
 \frac{W_{80}^{\mathrm{ref}}(W)}{W_{80}(W)}
 \right)
-$$
+```
 
 **where:**
 
