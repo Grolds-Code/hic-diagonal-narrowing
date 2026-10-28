@@ -1,0 +1,63 @@
+{
+  "experiment": "w80_map_level_uncertainty",
+  "source_file": "research_artifacts/stage1/w80_fixed_heterogeneity_map_audit_v1.json",
+  "bootstrap_seed": 20261029,
+  "bootstrap_replicates": 10000,
+  "independent_unit": "synthetic_intensity_map",
+  "results": {
+    "Region_A_like": {
+      "independent_map_count": 40,
+      "poisson_observations_per_map": 80,
+      "coverage_population": 0.9715624999999999,
+      "coverage_population_bootstrap_95": [
+        0.940625,
+        0.99125
+      ],
+      "coverage_fixed_map": 0.9959374999999999,
+      "coverage_fixed_map_bootstrap_95": [
+        0.993125,
+        0.9984375
+      ],
+      "coverage_difference_fixed_minus_population": 0.024375,
+      "coverage_difference_bootstrap_95": [
+        0.0050000000000001155,
+        0.05562500000000026
+      ],
+      "fraction_shifted_maps": 0.2,
+      "shifted_map_count": 8,
+      "population_coverage_shifted_maps": 0.8703125,
+      "population_coverage_unshifted_maps": 0.996875,
+      "fraction_bootstrap_population_coverage_below_95pct": 0.0704
+    },
+    "Region_B_like": {
+      "independent_map_count": 40,
+      "poisson_observations_per_map": 80,
+      "coverage_population": 0.83625,
+      "coverage_population_bootstrap_95": [
+        0.74,
+        0.9221875
+      ],
+      "coverage_fixed_map": 0.9949999999999999,
+      "coverage_fixed_map_bootstrap_95": [
+        0.9915624999999999,
+        0.9981249999999999
+      ],
+      "coverage_difference_fixed_minus_population": 0.15875,
+      "coverage_difference_bootstrap_95": [
+        0.07281249999999995,
+        0.25469531250000005
+      ],
+      "fraction_shifted_maps": 0.375,
+      "shifted_map_count": 15,
+      "population_coverage_shifted_maps": 0.5741666666666667,
+      "population_coverage_unshifted_maps": 0.9934999999999999,
+      "fraction_bootstrap_population_coverage_below_95pct": 0.9971
+    }
+  },
+  "limitations": [
+    "Cluster bootstrap intervals concern synthetic map sampling",
+    "Only 40 independently generated maps per profile",
+    "Within-map coverage is estimated from 80 Poisson trials",
+    "No inference about real HCT116 biological coverage"
+  ]
+}

@@ -1,0 +1,476 @@
+{
+  "experiment": "w80_estimand_under_heterogeneity",
+  "seed": 20261028,
+  "trials_per_scenario": 600,
+  "confidence_level": 0.95,
+  "exposures_per_distance": 64,
+  "distance_bands": 64,
+  "fixed_pair_effect_shape": 0.5,
+  "redrawn_pair_effect_shape": 0.5,
+  "block_effect_shape": 8.0,
+  "results": {
+    "Region_A_like": {
+      "unconditional_mean_w80": 14,
+      "expected_total_contacts": 2478,
+      "models": {
+        "independent_poisson": {
+          "model": "independent_poisson",
+          "trials": 600,
+          "population_target_w80": 14,
+          "coverage_population_target": 1.0,
+          "population_coverage_wilson_95": [
+            0.9936382989862994,
+            1.0000000000000002
+          ],
+          "coverage_latent_target": 1.0,
+          "latent_coverage_wilson_95": [
+            0.9936382989862994,
+            1.0000000000000002
+          ],
+          "fraction_latent_target_shifted": 0.0,
+          "median_absolute_latent_shift_bins": 0.0,
+          "median_interval_span_bins": 1.0,
+          "population_target_miss_below": 0.0,
+          "population_target_miss_above": 0.0,
+          "range_latent_w80": [
+            14,
+            14
+          ],
+          "fixed_heterogeneity_target_w80": null
+        },
+        "fixed_pair_heterogeneity": {
+          "model": "fixed_pair_heterogeneity",
+          "trials": 600,
+          "population_target_w80": 14,
+          "coverage_population_target": 0.9683333333333334,
+          "population_coverage_wilson_95": [
+            0.9510727848694855,
+            0.9796350885143483
+          ],
+          "coverage_latent_target": 0.9816666666666667,
+          "latent_coverage_wilson_95": [
+            0.9674722008560732,
+            0.9897326938340618
+          ],
+          "fraction_latent_target_shifted": 1.0,
+          "median_absolute_latent_shift_bins": 1.0,
+          "median_interval_span_bins": 1.0,
+          "population_target_miss_below": 0.03166666666666667,
+          "population_target_miss_above": 0.0,
+          "range_latent_w80": [
+            15,
+            15
+          ],
+          "fixed_heterogeneity_target_w80": 15
+        },
+        "redrawn_pair_gamma": {
+          "model": "redrawn_pair_gamma",
+          "trials": 600,
+          "population_target_w80": 14,
+          "coverage_population_target": 0.9433333333333334,
+          "population_coverage_wilson_95": [
+            0.9218576137878242,
+            0.9591683446466946
+          ],
+          "coverage_latent_target": 0.9916666666666667,
+          "latent_coverage_wilson_95": [
+            0.9806422645978722,
+            0.9964353960719888
+          ],
+          "fraction_latent_target_shifted": 0.26166666666666666,
+          "median_absolute_latent_shift_bins": 0.0,
+          "median_interval_span_bins": 1.0,
+          "population_target_miss_below": 0.03166666666666667,
+          "population_target_miss_above": 0.025,
+          "range_latent_w80": [
+            12,
+            16
+          ],
+          "fixed_heterogeneity_target_w80": null
+        },
+        "block_1": {
+          "model": "block_1",
+          "trials": 600,
+          "population_target_w80": 14,
+          "coverage_population_target": 0.7433333333333333,
+          "population_coverage_wilson_95": [
+            0.7069121461356086,
+            0.7766584927043904
+          ],
+          "coverage_latent_target": 0.9966666666666667,
+          "latent_coverage_wilson_95": [
+            0.9879286403465287,
+            0.9990854033131954
+          ],
+          "fraction_latent_target_shifted": 0.5816666666666667,
+          "median_absolute_latent_shift_bins": 1.0,
+          "median_interval_span_bins": 1.0,
+          "population_target_miss_below": 0.10833333333333334,
+          "population_target_miss_above": 0.14833333333333334,
+          "range_latent_w80": [
+            11,
+            16
+          ],
+          "fixed_heterogeneity_target_w80": null
+        },
+        "block_2": {
+          "model": "block_2",
+          "trials": 600,
+          "population_target_w80": 14,
+          "coverage_population_target": 0.6083333333333333,
+          "population_coverage_wilson_95": [
+            0.568705240514882,
+            0.6465830575988161
+          ],
+          "coverage_latent_target": 0.99,
+          "latent_coverage_wilson_95": [
+            0.9783564551842772,
+            0.9954090778222962
+          ],
+          "fraction_latent_target_shifted": 0.695,
+          "median_absolute_latent_shift_bins": 1.0,
+          "median_interval_span_bins": 1.0,
+          "population_target_miss_below": 0.2,
+          "population_target_miss_above": 0.19166666666666668,
+          "range_latent_w80": [
+            10,
+            18
+          ],
+          "fixed_heterogeneity_target_w80": null
+        },
+        "block_4": {
+          "model": "block_4",
+          "trials": 600,
+          "population_target_w80": 14,
+          "coverage_population_target": 0.4666666666666667,
+          "population_coverage_wilson_95": [
+            0.427086743461777,
+            0.5066707032724699
+          ],
+          "coverage_latent_target": 0.9816666666666667,
+          "latent_coverage_wilson_95": [
+            0.9674722008560732,
+            0.9897326938340618
+          ],
+          "fraction_latent_target_shifted": 0.795,
+          "median_absolute_latent_shift_bins": 1.0,
+          "median_interval_span_bins": 1.0,
+          "population_target_miss_below": 0.2683333333333333,
+          "population_target_miss_above": 0.265,
+          "range_latent_w80": [
+            9,
+            18
+          ],
+          "fixed_heterogeneity_target_w80": null
+        },
+        "block_8": {
+          "model": "block_8",
+          "trials": 600,
+          "population_target_w80": 14,
+          "coverage_population_target": 0.4066666666666667,
+          "population_coverage_wilson_95": [
+            0.36807675129565204,
+            0.44644409956023884
+          ],
+          "coverage_latent_target": 0.9983333333333333,
+          "latent_coverage_wilson_95": [
+            0.9906204395238613,
+            0.9997057317991506
+          ],
+          "fraction_latent_target_shifted": 0.8066666666666666,
+          "median_absolute_latent_shift_bins": 1.0,
+          "median_interval_span_bins": 1.0,
+          "population_target_miss_below": 0.32666666666666666,
+          "population_target_miss_above": 0.26666666666666666,
+          "range_latent_w80": [
+            8,
+            22
+          ],
+          "fixed_heterogeneity_target_w80": null
+        },
+        "block_16": {
+          "model": "block_16",
+          "trials": 600,
+          "population_target_w80": 14,
+          "coverage_population_target": 0.44,
+          "population_coverage_wilson_95": [
+            0.40078790423541655,
+            0.4799754998862277
+          ],
+          "coverage_latent_target": 0.9916666666666667,
+          "latent_coverage_wilson_95": [
+            0.9806422645978722,
+            0.9964353960719888
+          ],
+          "fraction_latent_target_shifted": 0.8166666666666667,
+          "median_absolute_latent_shift_bins": 1.0,
+          "median_interval_span_bins": 1.0,
+          "population_target_miss_below": 0.32666666666666666,
+          "population_target_miss_above": 0.23333333333333334,
+          "range_latent_w80": [
+            11,
+            22
+          ],
+          "fixed_heterogeneity_target_w80": null
+        },
+        "block_64": {
+          "model": "block_64",
+          "trials": 600,
+          "population_target_w80": 14,
+          "coverage_population_target": 0.9983333333333333,
+          "population_coverage_wilson_95": [
+            0.9906204395238613,
+            0.9997057317991506
+          ],
+          "coverage_latent_target": 0.9983333333333333,
+          "latent_coverage_wilson_95": [
+            0.9906204395238613,
+            0.9997057317991506
+          ],
+          "fraction_latent_target_shifted": 0.0,
+          "median_absolute_latent_shift_bins": 0.0,
+          "median_interval_span_bins": 1.0,
+          "population_target_miss_below": 0.0016666666666666668,
+          "population_target_miss_above": 0.0,
+          "range_latent_w80": [
+            14,
+            14
+          ],
+          "fixed_heterogeneity_target_w80": null
+        }
+      }
+    },
+    "Region_B_like": {
+      "unconditional_mean_w80": 13,
+      "expected_total_contacts": 4695,
+      "models": {
+        "independent_poisson": {
+          "model": "independent_poisson",
+          "trials": 600,
+          "population_target_w80": 13,
+          "coverage_population_target": 0.9933333333333333,
+          "population_coverage_wilson_95": [
+            0.9829852895846635,
+            0.9974044987484852
+          ],
+          "coverage_latent_target": 0.9933333333333333,
+          "latent_coverage_wilson_95": [
+            0.9829852895846635,
+            0.9974044987484852
+          ],
+          "fraction_latent_target_shifted": 0.0,
+          "median_absolute_latent_shift_bins": 0.0,
+          "median_interval_span_bins": 1.0,
+          "population_target_miss_below": 0.0,
+          "population_target_miss_above": 0.006666666666666667,
+          "range_latent_w80": [
+            13,
+            13
+          ],
+          "fixed_heterogeneity_target_w80": null
+        },
+        "fixed_pair_heterogeneity": {
+          "model": "fixed_pair_heterogeneity",
+          "trials": 600,
+          "population_target_w80": 13,
+          "coverage_population_target": 0.695,
+          "population_coverage_wilson_95": [
+            0.657016298987854,
+            0.7305026376168028
+          ],
+          "coverage_latent_target": 1.0,
+          "latent_coverage_wilson_95": [
+            0.9936382989862994,
+            1.0000000000000002
+          ],
+          "fraction_latent_target_shifted": 1.0,
+          "median_absolute_latent_shift_bins": 1.0,
+          "median_interval_span_bins": 1.0,
+          "population_target_miss_below": 0.0,
+          "population_target_miss_above": 0.305,
+          "range_latent_w80": [
+            12,
+            12
+          ],
+          "fixed_heterogeneity_target_w80": 12
+        },
+        "redrawn_pair_gamma": {
+          "model": "redrawn_pair_gamma",
+          "trials": 600,
+          "population_target_w80": 13,
+          "coverage_population_target": 0.8766666666666667,
+          "population_coverage_wilson_95": [
+            0.8479344577657781,
+            0.9006063941372342
+          ],
+          "coverage_latent_target": 0.9933333333333333,
+          "latent_coverage_wilson_95": [
+            0.9829852895846635,
+            0.9974044987484852
+          ],
+          "fraction_latent_target_shifted": 0.4266666666666667,
+          "median_absolute_latent_shift_bins": 0.0,
+          "median_interval_span_bins": 1.0,
+          "population_target_miss_below": 0.005,
+          "population_target_miss_above": 0.11833333333333333,
+          "range_latent_w80": [
+            11,
+            14
+          ],
+          "fixed_heterogeneity_target_w80": null
+        },
+        "block_1": {
+          "model": "block_1",
+          "trials": 600,
+          "population_target_w80": 13,
+          "coverage_population_target": 0.6233333333333333,
+          "population_coverage_wilson_95": [
+            0.5838929047691053,
+            0.6612045423141819
+          ],
+          "coverage_latent_target": 0.995,
+          "latent_coverage_wilson_95": [
+            0.9854037936547144,
+            0.998298122341722
+          ],
+          "fraction_latent_target_shifted": 0.615,
+          "median_absolute_latent_shift_bins": 1.0,
+          "median_interval_span_bins": 1.0,
+          "population_target_miss_below": 0.07166666666666667,
+          "population_target_miss_above": 0.305,
+          "range_latent_w80": [
+            10,
+            15
+          ],
+          "fixed_heterogeneity_target_w80": null
+        },
+        "block_2": {
+          "model": "block_2",
+          "trials": 600,
+          "population_target_w80": 13,
+          "coverage_population_target": 0.5516666666666666,
+          "population_coverage_wilson_95": [
+            0.5116699679696873,
+            0.5910059895922303
+          ],
+          "coverage_latent_target": 0.99,
+          "latent_coverage_wilson_95": [
+            0.9783564551842772,
+            0.9954090778222962
+          ],
+          "fraction_latent_target_shifted": 0.6816666666666666,
+          "median_absolute_latent_shift_bins": 1.0,
+          "median_interval_span_bins": 1.0,
+          "population_target_miss_below": 0.11,
+          "population_target_miss_above": 0.3383333333333333,
+          "range_latent_w80": [
+            8,
+            16
+          ],
+          "fixed_heterogeneity_target_w80": null
+        },
+        "block_4": {
+          "model": "block_4",
+          "trials": 600,
+          "population_target_w80": 13,
+          "coverage_population_target": 0.4083333333333333,
+          "population_coverage_wilson_95": [
+            0.3697079523785386,
+            0.44812502614064
+          ],
+          "coverage_latent_target": 0.9933333333333333,
+          "latent_coverage_wilson_95": [
+            0.9829852895846635,
+            0.9974044987484852
+          ],
+          "fraction_latent_target_shifted": 0.795,
+          "median_absolute_latent_shift_bins": 1.0,
+          "median_interval_span_bins": 1.0,
+          "population_target_miss_below": 0.21,
+          "population_target_miss_above": 0.38166666666666665,
+          "range_latent_w80": [
+            8,
+            18
+          ],
+          "fixed_heterogeneity_target_w80": null
+        },
+        "block_8": {
+          "model": "block_8",
+          "trials": 600,
+          "population_target_w80": 13,
+          "coverage_population_target": 0.365,
+          "population_coverage_wilson_95": [
+            0.32745022590284734,
+            0.4042674333708519
+          ],
+          "coverage_latent_target": 0.9933333333333333,
+          "latent_coverage_wilson_95": [
+            0.9829852895846635,
+            0.9974044987484852
+          ],
+          "fraction_latent_target_shifted": 0.7983333333333333,
+          "median_absolute_latent_shift_bins": 1.0,
+          "median_interval_span_bins": 1.0,
+          "population_target_miss_below": 0.29,
+          "population_target_miss_above": 0.345,
+          "range_latent_w80": [
+            7,
+            20
+          ],
+          "fixed_heterogeneity_target_w80": null
+        },
+        "block_16": {
+          "model": "block_16",
+          "trials": 600,
+          "population_target_w80": 13,
+          "coverage_population_target": 0.37,
+          "population_coverage_wilson_95": [
+            0.3323095384746026,
+            0.40934450378895965
+          ],
+          "coverage_latent_target": 0.9916666666666667,
+          "latent_coverage_wilson_95": [
+            0.9806422645978722,
+            0.9964353960719888
+          ],
+          "fraction_latent_target_shifted": 0.8233333333333334,
+          "median_absolute_latent_shift_bins": 1.0,
+          "median_interval_span_bins": 1.0,
+          "population_target_miss_below": 0.23833333333333334,
+          "population_target_miss_above": 0.39166666666666666,
+          "range_latent_w80": [
+            10,
+            22
+          ],
+          "fixed_heterogeneity_target_w80": null
+        },
+        "block_64": {
+          "model": "block_64",
+          "trials": 600,
+          "population_target_w80": 13,
+          "coverage_population_target": 0.9866666666666667,
+          "population_coverage_wilson_95": [
+            0.9739126318293848,
+            0.9932286458506133
+          ],
+          "coverage_latent_target": 0.9866666666666667,
+          "latent_coverage_wilson_95": [
+            0.9739126318293848,
+            0.9932286458506133
+          ],
+          "fraction_latent_target_shifted": 0.0,
+          "median_absolute_latent_shift_bins": 0.0,
+          "median_interval_span_bins": 1.0,
+          "population_target_miss_below": 0.0,
+          "population_target_miss_above": 0.013333333333333334,
+          "range_latent_w80": [
+            13,
+            13
+          ],
+          "fixed_heterogeneity_target_w80": null
+        }
+      }
+    }
+  },
+  "interpretation": "Coverage of unconditional population W80 versus realized sample-specific latent W80. Synthetic random-effect models are hypothetical and not fitted to HCT116 biological replicates."
+}

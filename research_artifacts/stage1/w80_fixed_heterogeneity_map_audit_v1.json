@@ -1,0 +1,771 @@
+{
+  "experiment": "fixed_heterogeneity_map_audit",
+  "seed": 20261028,
+  "maps_per_profile": 40,
+  "replicates_per_map": 80,
+  "gamma_pair_shape": 0.5,
+  "nominal_confidence": 0.95,
+  "results": {
+    "Region_A_like": {
+      "region": "Region_A_like",
+      "population_w80": 14,
+      "independent_maps": 40,
+      "poisson_observations_per_map": 80,
+      "total_observations": 3200,
+      "maps_with_shifted_latent_w80": 8,
+      "fraction_maps_with_shifted_latent_w80": 0.2,
+      "map_w80_range": [
+        13,
+        15
+      ],
+      "mean_within_map_latent_inclusion": 0.9959374999999999,
+      "mean_reference_population_inclusion": 0.9715624999999999,
+      "minimum_within_map_latent_inclusion": 0.9625,
+      "median_within_map_latent_inclusion": 1.0,
+      "median_reference_population_inclusion": 1.0,
+      "maps": [
+        {
+          "map_id": 0,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 1,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 2,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 2.0
+        },
+        {
+          "map_id": 3,
+          "population_w80": 14,
+          "fixed_map_w80": 15,
+          "latent_target_shift_bins": 1,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 0.9375,
+          "median_interval_span": 2.0
+        },
+        {
+          "map_id": 4,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 5,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 6,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 0.9875,
+          "reference_population_inclusion": 0.9875,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 7,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 8,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 2.0
+        },
+        {
+          "map_id": 9,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 0.9875,
+          "reference_population_inclusion": 0.9875,
+          "median_interval_span": 2.0
+        },
+        {
+          "map_id": 10,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 11,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 0.9875,
+          "reference_population_inclusion": 0.9875,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 12,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 13,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 14,
+          "population_w80": 14,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": -1,
+          "conditional_latent_inclusion": 0.975,
+          "reference_population_inclusion": 0.975,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 15,
+          "population_w80": 14,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": -1,
+          "conditional_latent_inclusion": 0.9875,
+          "reference_population_inclusion": 0.9375,
+          "median_interval_span": 2.0
+        },
+        {
+          "map_id": 16,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 17,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 2.0
+        },
+        {
+          "map_id": 18,
+          "population_w80": 14,
+          "fixed_map_w80": 15,
+          "latent_target_shift_bins": 1,
+          "conditional_latent_inclusion": 0.9875,
+          "reference_population_inclusion": 0.9125,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 19,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 2.0
+        },
+        {
+          "map_id": 20,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 21,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 0.9875,
+          "reference_population_inclusion": 0.9875,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 22,
+          "population_w80": 14,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": -1,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 0.8375,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 23,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 24,
+          "population_w80": 14,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": -1,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 0.4875,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 25,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 0.9875,
+          "reference_population_inclusion": 0.9875,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 26,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 0.9625,
+          "reference_population_inclusion": 0.9625,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 27,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 28,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 29,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 30,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 2.0
+        },
+        {
+          "map_id": 31,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 32,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 33,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 34,
+          "population_w80": 14,
+          "fixed_map_w80": 15,
+          "latent_target_shift_bins": 1,
+          "conditional_latent_inclusion": 0.9875,
+          "reference_population_inclusion": 0.95,
+          "median_interval_span": 2.0
+        },
+        {
+          "map_id": 35,
+          "population_w80": 14,
+          "fixed_map_w80": 15,
+          "latent_target_shift_bins": 1,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 0.925,
+          "median_interval_span": 2.0
+        },
+        {
+          "map_id": 36,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 37,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 2.0
+        },
+        {
+          "map_id": 38,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 2.0
+        },
+        {
+          "map_id": 39,
+          "population_w80": 14,
+          "fixed_map_w80": 14,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        }
+      ]
+    },
+    "Region_B_like": {
+      "region": "Region_B_like",
+      "population_w80": 13,
+      "independent_maps": 40,
+      "poisson_observations_per_map": 80,
+      "total_observations": 3200,
+      "maps_with_shifted_latent_w80": 15,
+      "fraction_maps_with_shifted_latent_w80": 0.375,
+      "map_w80_range": [
+        12,
+        13
+      ],
+      "mean_within_map_latent_inclusion": 0.9949999999999999,
+      "mean_reference_population_inclusion": 0.83625,
+      "minimum_within_map_latent_inclusion": 0.9625,
+      "median_within_map_latent_inclusion": 1.0,
+      "median_reference_population_inclusion": 0.98125,
+      "maps": [
+        {
+          "map_id": 0,
+          "population_w80": 13,
+          "fixed_map_w80": 12,
+          "latent_target_shift_bins": -1,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 0.9625,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 1,
+          "population_w80": 13,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 2,
+          "population_w80": 13,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 3,
+          "population_w80": 13,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 4,
+          "population_w80": 13,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 0.975,
+          "reference_population_inclusion": 0.975,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 5,
+          "population_w80": 13,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 6,
+          "population_w80": 13,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 0.975,
+          "reference_population_inclusion": 0.975,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 7,
+          "population_w80": 13,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 8,
+          "population_w80": 13,
+          "fixed_map_w80": 12,
+          "latent_target_shift_bins": -1,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 0.6875,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 9,
+          "population_w80": 13,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 0.975,
+          "reference_population_inclusion": 0.975,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 10,
+          "population_w80": 13,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 11,
+          "population_w80": 13,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 0.9875,
+          "reference_population_inclusion": 0.9875,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 12,
+          "population_w80": 13,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 13,
+          "population_w80": 13,
+          "fixed_map_w80": 12,
+          "latent_target_shift_bins": -1,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 0.9125,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 14,
+          "population_w80": 13,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 15,
+          "population_w80": 13,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 0.0
+        },
+        {
+          "map_id": 16,
+          "population_w80": 13,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 17,
+          "population_w80": 13,
+          "fixed_map_w80": 12,
+          "latent_target_shift_bins": -1,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 0.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 18,
+          "population_w80": 13,
+          "fixed_map_w80": 12,
+          "latent_target_shift_bins": -1,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 0.8875,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 19,
+          "population_w80": 13,
+          "fixed_map_w80": 12,
+          "latent_target_shift_bins": -1,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 0.975,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 20,
+          "population_w80": 13,
+          "fixed_map_w80": 12,
+          "latent_target_shift_bins": -1,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 0.925,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 21,
+          "population_w80": 13,
+          "fixed_map_w80": 12,
+          "latent_target_shift_bins": -1,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 0.4875,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 22,
+          "population_w80": 13,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 23,
+          "population_w80": 13,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 0.9875,
+          "reference_population_inclusion": 0.9875,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 24,
+          "population_w80": 13,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 25,
+          "population_w80": 13,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 26,
+          "population_w80": 13,
+          "fixed_map_w80": 12,
+          "latent_target_shift_bins": -1,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 0.3375,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 27,
+          "population_w80": 13,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 28,
+          "population_w80": 13,
+          "fixed_map_w80": 12,
+          "latent_target_shift_bins": -1,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 0.85,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 29,
+          "population_w80": 13,
+          "fixed_map_w80": 12,
+          "latent_target_shift_bins": -1,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 0.1,
+          "median_interval_span": 0.0
+        },
+        {
+          "map_id": 30,
+          "population_w80": 13,
+          "fixed_map_w80": 12,
+          "latent_target_shift_bins": -1,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 0.4875,
+          "median_interval_span": 0.0
+        },
+        {
+          "map_id": 31,
+          "population_w80": 13,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 32,
+          "population_w80": 13,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 0.975,
+          "reference_population_inclusion": 0.975,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 33,
+          "population_w80": 13,
+          "fixed_map_w80": 12,
+          "latent_target_shift_bins": -1,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 0.725,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 34,
+          "population_w80": 13,
+          "fixed_map_w80": 12,
+          "latent_target_shift_bins": -1,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 0.225,
+          "median_interval_span": 0.0
+        },
+        {
+          "map_id": 35,
+          "population_w80": 13,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 36,
+          "population_w80": 13,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 37,
+          "population_w80": 13,
+          "fixed_map_w80": 12,
+          "latent_target_shift_bins": -1,
+          "conditional_latent_inclusion": 0.9625,
+          "reference_population_inclusion": 0.05,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 38,
+          "population_w80": 13,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 0.9625,
+          "reference_population_inclusion": 0.9625,
+          "median_interval_span": 1.0
+        },
+        {
+          "map_id": 39,
+          "population_w80": 13,
+          "fixed_map_w80": 13,
+          "latent_target_shift_bins": 0,
+          "conditional_latent_inclusion": 1.0,
+          "reference_population_inclusion": 1.0,
+          "median_interval_span": 1.0
+        }
+      ]
+    }
+  },
+  "limitations": "Synthetic fixed heterogeneous intensities. Map-level variation is not biological replication. The reference population profile is a generating distribution expectation rather than the realized intensity profile of an individual map."
+}

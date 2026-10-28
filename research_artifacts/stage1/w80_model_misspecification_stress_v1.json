@@ -1,0 +1,173 @@
+{
+  "experiment": "w80_model_misspecification_stress",
+  "seed": 20261028,
+  "trials_per_case": 1000,
+  "nominal_confidence": 0.95,
+  "exposure_per_band": 64,
+  "distance_bands": 64,
+  "models": {
+    "independent_poisson": "Independent Poisson aggregate band counts",
+    "global_depth_gamma": "Shared Gamma(shape=4) depth multiplier preserving conditional multinomial probabilities",
+    "independent_pair_gamma_poisson": "Independent pair-level Gamma-Poisson effects; negative-binomial shape kappa=0.5",
+    "correlated_distance_block_gamma": "Shared Gamma(shape=8) multiplier within each eight-distance block"
+  },
+  "results": {
+    "Region_A_like": {
+      "profile": {
+        "tau": 8.4,
+        "total_expected_contacts": 2478,
+        "expected_w80": 14
+      },
+      "true_population_w80_bins": 14,
+      "models": {
+        "independent_poisson": {
+          "model": "independent_poisson",
+          "trials_requested": 1000,
+          "valid_trials": 1000,
+          "empty_trials": 0,
+          "true_population_w80_bins": 14,
+          "empirical_coverage": 1.0,
+          "coverage_wilson_95": [
+            0.996173241514445,
+            1.0
+          ],
+          "lower_tail_miss_fraction": 0.0,
+          "upper_tail_miss_fraction": 0.0,
+          "median_interval_span_bins": 1.0,
+          "median_absolute_w80_error_bins": 0.0,
+          "fraction_point_estimate_exact": 0.857
+        },
+        "global_depth_gamma": {
+          "model": "global_depth_gamma",
+          "trials_requested": 1000,
+          "valid_trials": 1000,
+          "empty_trials": 0,
+          "true_population_w80_bins": 14,
+          "empirical_coverage": 0.998,
+          "coverage_wilson_95": [
+            0.9927371921365079,
+            0.9994513564118793
+          ],
+          "lower_tail_miss_fraction": 0.001,
+          "upper_tail_miss_fraction": 0.001,
+          "median_interval_span_bins": 1.0,
+          "median_absolute_w80_error_bins": 0.0,
+          "fraction_point_estimate_exact": 0.795
+        },
+        "independent_pair_gamma_poisson": {
+          "model": "independent_pair_gamma_poisson",
+          "trials_requested": 1000,
+          "valid_trials": 1000,
+          "empty_trials": 0,
+          "true_population_w80_bins": 14,
+          "empirical_coverage": 0.958,
+          "coverage_wilson_95": [
+            0.9437155747733968,
+            0.9687791144538346
+          ],
+          "lower_tail_miss_fraction": 0.022,
+          "upper_tail_miss_fraction": 0.02,
+          "median_interval_span_bins": 1.0,
+          "median_absolute_w80_error_bins": 0.0,
+          "fraction_point_estimate_exact": 0.629
+        },
+        "correlated_distance_block_gamma": {
+          "model": "correlated_distance_block_gamma",
+          "trials_requested": 1000,
+          "valid_trials": 1000,
+          "empty_trials": 0,
+          "true_population_w80_bins": 14,
+          "empirical_coverage": 0.41,
+          "coverage_wilson_95": [
+            0.3799172576460708,
+            0.4407715588813291
+          ],
+          "lower_tail_miss_fraction": 0.309,
+          "upper_tail_miss_fraction": 0.281,
+          "median_interval_span_bins": 1.0,
+          "median_absolute_w80_error_bins": 1.0,
+          "fraction_point_estimate_exact": 0.172
+        }
+      }
+    },
+    "Region_B_like": {
+      "profile": {
+        "tau": 7.5,
+        "total_expected_contacts": 4695,
+        "expected_w80": 13
+      },
+      "true_population_w80_bins": 13,
+      "models": {
+        "independent_poisson": {
+          "model": "independent_poisson",
+          "trials_requested": 1000,
+          "valid_trials": 1000,
+          "empty_trials": 0,
+          "true_population_w80_bins": 13,
+          "empirical_coverage": 0.986,
+          "coverage_wilson_95": [
+            0.9766379658824644,
+            0.9916424248695761
+          ],
+          "lower_tail_miss_fraction": 0.0,
+          "upper_tail_miss_fraction": 0.014,
+          "median_interval_span_bins": 1.0,
+          "median_absolute_w80_error_bins": 0.0,
+          "fraction_point_estimate_exact": 0.639
+        },
+        "global_depth_gamma": {
+          "model": "global_depth_gamma",
+          "trials_requested": 1000,
+          "valid_trials": 1000,
+          "empty_trials": 0,
+          "true_population_w80_bins": 13,
+          "empirical_coverage": 0.988,
+          "coverage_wilson_95": [
+            0.9791427315245017,
+            0.9931223521935965
+          ],
+          "lower_tail_miss_fraction": 0.0,
+          "upper_tail_miss_fraction": 0.012,
+          "median_interval_span_bins": 1.0,
+          "median_absolute_w80_error_bins": 0.0,
+          "fraction_point_estimate_exact": 0.608
+        },
+        "independent_pair_gamma_poisson": {
+          "model": "independent_pair_gamma_poisson",
+          "trials_requested": 1000,
+          "valid_trials": 1000,
+          "empty_trials": 0,
+          "true_population_w80_bins": 13,
+          "empirical_coverage": 0.848,
+          "coverage_wilson_95": [
+            0.8244190786570326,
+            0.868917497437021
+          ],
+          "lower_tail_miss_fraction": 0.002,
+          "upper_tail_miss_fraction": 0.15,
+          "median_interval_span_bins": 1.0,
+          "median_absolute_w80_error_bins": 0.0,
+          "fraction_point_estimate_exact": 0.535
+        },
+        "correlated_distance_block_gamma": {
+          "model": "correlated_distance_block_gamma",
+          "trials_requested": 1000,
+          "valid_trials": 1000,
+          "empty_trials": 0,
+          "true_population_w80_bins": 13,
+          "empirical_coverage": 0.342,
+          "coverage_wilson_95": [
+            0.3132528988050859,
+            0.37195635687634954
+          ],
+          "lower_tail_miss_fraction": 0.269,
+          "upper_tail_miss_fraction": 0.389,
+          "median_interval_span_bins": 1.0,
+          "median_absolute_w80_error_bins": 1.0,
+          "fraction_point_estimate_exact": 0.167
+        }
+      }
+    }
+  },
+  "interpretation": "Synthetic coverage for W80 of unconditional population mean profiles. These models are hypothetical stress scenarios, not empirically fitted HCT116 count-generation models."
+}
