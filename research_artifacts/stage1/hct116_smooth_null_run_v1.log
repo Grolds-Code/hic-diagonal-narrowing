@@ -1,0 +1,43 @@
+✓ Initialized. View run at https://modal.com/apps/groldotieno97/main/ap-kaFUKybOwakROhVwG7BPfI
+✓ Created objects.
+├── ✓ Uploaded /home/grol/projects/hic-diagonal-narrowing/modal_hct116_smooth_null.py
+├── ✓ Uploaded src/hic_diagonal_narrowing/detect.py
+└── ✓ Created Function run_smooth_null.
+
+HCT116 SMOOTH SPATIAL NULL PILOT
+=================================================================
+Verification: PASS
+Observed maximum: 0.38702312310924725
+Windows: 122
+Simulations per scale: 100
+Geometric seam-zone fraction: 0.6229508196721312
+
+GAUSSIAN SIGMA: 50,000 bp
+null_max_range: [0.09310940439148145, 0.38702312310924725]
+null_max_percentiles_5_50_95: [0.18057224564182084, 0.18057224564182084, 0.2801079191927352]
+maxima_at_least_observed: 1
+median_called_windows: 0.0
+median_merged_regions: 0.0
+peak_near_100kb_seam_fraction: 0.54
+
+GAUSSIAN SIGMA: 100,000 bp
+null_max_range: [0.0874628412503394, 0.2801079191927352]
+null_max_percentiles_5_50_95: [0.18057224564182084, 0.18057224564182084, 0.2801079191927352]
+maxima_at_least_observed: 0
+median_called_windows: 0.0
+median_merged_regions: 0.0
+peak_near_100kb_seam_fraction: 0.64
+
+GAUSSIAN SIGMA: 200,000 bp
+null_max_range: [0.0874628412503394, 0.2801079191927352]
+null_max_percentiles_5_50_95: [0.18057224564182084, 0.18057224564182084, 0.2801079191927352]
+maxima_at_least_observed: 0
+median_called_windows: 0.0
+median_merged_regions: 0.0
+peak_near_100kb_seam_fraction: 0.59
+
+Significance: NOT_CALIBRATED
+Read-only smooth-null pilot: PASS
+Stopping app - local entrypoint completed.
+Runner terminated.
+✓ App completed. View run at https://modal.com/apps/groldotieno97/main/ap-kaFUKybOwakROhVwG7BPfI

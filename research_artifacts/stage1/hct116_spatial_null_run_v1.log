@@ -1,0 +1,31 @@
+✓ Initialized. View run at https://modal.com/apps/groldotieno97/main/ap-gvfxMqNT5HzzSZcxkh5iMA
+✓ Created objects.
+├── ✓ Uploaded /home/grol/projects/hic-diagonal-narrowing/modal_hct116_spatial_null.py
+├── ✓ Uploaded src/hic_diagonal_narrowing/detect.py
+└── ✓ Created Function evaluate_spatial_null.
+
+HCT116 SPATIALLY STRATIFIED NULL PILOT
+=================================================================
+source_checksum: PASS
+baseline_reconstruction: PASS
+midpoint_depth_preservation: PASS
+background_blocks: 10
+block_width_bp: 100000
+midpoint_parity_strata: 20
+windows: 122
+replicates: 100
+seed: 20261024
+observed_max_score: 0.38702312310924725
+observed_called_windows: 5
+observed_merged_regions: 2
+null_maximum_range: [0.18057224564182084, 0.38702312310924725]
+null_maximum_percentiles: [0.18057224564182084, 0.18057224564182084, 0.2854536793885605]
+null_maxima_at_least_observed: 5
+median_null_called_windows: 0.0
+median_null_merged_regions: 0.0
+fraction_null_peaks_within_32kb_of_seam: 0.67
+interpretation: Exploratory block-stratified null. Not calibrated for biological significance.
+
+Spatial null-model pilot: PASS
+Stopping app - local entrypoint completed.
+✓ App completed. View run at https://modal.com/apps/groldotieno97/main/ap-gvfxMqNT5HzzSZcxkh5iMA

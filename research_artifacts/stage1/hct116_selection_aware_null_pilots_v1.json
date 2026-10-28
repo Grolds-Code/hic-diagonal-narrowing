@@ -1,0 +1,92 @@
+{
+  "analysis": "hct116_selection_aware_null_pilot_summary",
+  "observed_maximum_narrowing_score": 0.38702312310924725,
+  "window_count": 122,
+  "threshold": 0.2,
+  "geometric_seam_zone_fraction": 0.6229508196721312,
+  "spatial": {
+    "model": "block_stratified_midpoint_depth_preserving",
+    "block_width_bp": 100000,
+    "null_maximum_range": [
+      0.18057224564182084,
+      0.38702312310924725
+    ],
+    "null_maximum_percentiles_5_50_95": [
+      0.18057224564182084,
+      0.18057224564182084,
+      0.2854536793885605
+    ],
+    "near_seam_fraction": 0.67,
+    "exceedances": 5,
+    "simulations": 100,
+    "plus_one_tail_fraction": 0.0594059405940594
+  },
+  "smooth": [
+    {
+      "model": "smooth_midpoint_depth_preserving",
+      "sigma_bp": 50000,
+      "null_maximum_range": [
+        0.09310940439148145,
+        0.38702312310924725
+      ],
+      "null_maximum_percentiles_5_50_95": [
+        0.18057224564182084,
+        0.18057224564182084,
+        0.2801079191927352
+      ],
+      "near_seam_fraction": 0.54,
+      "exceedances": 1,
+      "simulations": 100,
+      "plus_one_tail_fraction": 0.019801980198019802
+    },
+    {
+      "model": "smooth_midpoint_depth_preserving",
+      "sigma_bp": 100000,
+      "null_maximum_range": [
+        0.0874628412503394,
+        0.2801079191927352
+      ],
+      "null_maximum_percentiles_5_50_95": [
+        0.18057224564182084,
+        0.18057224564182084,
+        0.2801079191927352
+      ],
+      "near_seam_fraction": 0.64,
+      "exceedances": 0,
+      "simulations": 100,
+      "plus_one_tail_fraction": 0.009900990099009901
+    },
+    {
+      "model": "smooth_midpoint_depth_preserving",
+      "sigma_bp": 200000,
+      "null_maximum_range": [
+        0.0874628412503394,
+        0.2801079191927352
+      ],
+      "null_maximum_percentiles_5_50_95": [
+        0.18057224564182084,
+        0.18057224564182084,
+        0.2801079191927352
+      ],
+      "near_seam_fraction": 0.59,
+      "exceedances": 0,
+      "simulations": 100,
+      "plus_one_tail_fraction": 0.009900990099009901
+    }
+  ],
+  "run_log_sha256": {
+    "spatial": "ca890763de04e14f2c40f77caedec6ae05a0c62707de2f93aa88efb6bc05e48e",
+    "smooth": "d414464c4dfeed291397ff7be2eaf95b29413b410d6de19b941cae4d3787c8e9"
+  },
+  "source_scripts": [
+    "modal_hct116_spatial_null.py",
+    "modal_hct116_smooth_null.py"
+  ],
+  "limitations": [
+    "Exploratory null-generating mechanisms",
+    "Not calibrated for biological significance",
+    "No independent biological replicate validation",
+    "Plus-one fractions are conditional Monte Carlo summaries",
+    "Summary does not retain individual simulated maxima"
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "analysis": "joint_technical_candidate_score_sensitivity",
+  "source_sha256": "fb01bc848b4fecb342a450b8d87165393a89de019fc27c82e72d8519c07f5de5",
+  "profile_sha256": "b9205d00020568e038be3bbb42dfde3644d00cb86dcff127c1ea7f0abedf662f",
+  "seed": 20261028,
+  "replicates_per_retention": 200,
+  "threshold": 0.2,
+  "original_called_windows": 5,
+  "original_merged_regions": 2,
+  "baseline_scores": {
+    "Region A": 0.2801079191927352,
+    "Region B": 0.38702312310924725
+  },
+  "summaries": {
+    "0.5": {
+      "retention": 0.5,
+      "replicates": 200,
+      "region_a_score": {
+        "q05": 0.18057224564182084,
+        "median": 0.2801079191927352,
+        "q95": 0.38702312310924725
+      },
+      "region_b_score": {
+        "q05": 0.2801079191927352,
+        "median": 0.38702312310924725,
+        "q95": 0.5025003405291834
+      },
+      "score_difference_b_minus_a": {
+        "q05": -0.005345760195825488,
+        "median": 0.10691520391651205,
+        "q95": 0.2995602818589078
+      },
+      "fraction_region_a_called": 0.7,
+      "fraction_region_b_called": 0.995,
+      "fraction_both_called": 0.7,
+      "fraction_b_score_exceeds_a": 0.78,
+      "score_correlation": 0.06305662410754696,
+      "median_reference_a": 17.0,
+      "median_reference_b": 17.0,
+      "median_called_windows": 6.0
+    },
+    "0.25": {
+      "retention": 0.25,
+      "replicates": 200,
+      "region_a_score": {
+        "q05": 0.0874628412503394,
+        "median": 0.2801079191927352,
+        "q95": 0.5025003405291834
+      },
+      "region_b_score": {
+        "q05": 0.2801079191927352,
+        "median": 0.38702312310924725,
+        "q95": 0.6280312226130421
+      },
+      "score_difference_b_minus_a": {
+        "q05": -0.1154772174199361,
+        "median": 0.1069152039165121,
+        "q95": 0.4150374992788439
+      },
+      "fraction_region_a_called": 0.58,
+      "fraction_region_b_called": 0.965,
+      "fraction_both_called": 0.565,
+      "fraction_b_score_exceeds_a": 0.705,
+      "score_correlation": 0.06892132312221698,
+      "median_reference_a": 17.0,
+      "median_reference_b": 17.0,
+      "median_called_windows": 11.0
+    },
+    "0.1": {
+      "retention": 0.1,
+      "replicates": 200,
+      "region_a_score": {
+        "q05": -0.1604646721932461,
+        "median": 0.2801079191927352,
+        "q95": 0.765534746362977
+      },
+      "region_b_score": {
+        "q05": 0.09310940439148145,
+        "median": 0.38702312310924725,
+        "q95": 0.765534746362977
+      },
+      "score_difference_b_minus_a": {
+        "q05": -0.4854268271702417,
+        "median": 0.10691520391651205,
+        "q95": 0.7110257450149903
+      },
+      "fraction_region_a_called": 0.62,
+      "fraction_region_b_called": 0.835,
+      "fraction_both_called": 0.495,
+      "fraction_b_score_exceeds_a": 0.575,
+      "score_correlation": -0.07437683359906398,
+      "median_reference_a": 17.0,
+      "median_reference_b": 17.0,
+      "median_called_windows": 19.0
+    }
+  },
+  "interpretation": "Joint technical sensitivity conditional on pooled observed counts. Reference sets are recomputed by the original detector in every thinning draw. This is not a p-value, post-selection confidence interval, or biological replication experiment."
+}
