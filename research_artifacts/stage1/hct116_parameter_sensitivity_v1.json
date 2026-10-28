@@ -1,0 +1,727 @@
+{
+  "analysis": "hct116_stage1_parameter_sensitivity",
+  "source_sha256": "fb01bc848b4fecb342a450b8d87165393a89de019fc27c82e72d8519c07f5de5",
+  "profile_sha256": "b9205d00020568e038be3bbb42dfde3644d00cb86dcff127c1ea7f0abedf662f",
+  "baseline_reconstruction": "PASS",
+  "configurations": 21,
+  "window_sizes_bins": [
+    32,
+    64,
+    96
+  ],
+  "maximum_separations_bins": [
+    32,
+    48,
+    64
+  ],
+  "cumulative_fractions": [
+    0.7,
+    0.8,
+    0.9
+  ],
+  "scan_step_bins": 16,
+  "score_threshold": 0.2,
+  "results": [
+    {
+      "window_bins": 32,
+      "window_bp": 16000,
+      "max_separation_bins": 32,
+      "max_separation_bp": 16000,
+      "cumulative_fraction": 0.7,
+      "windows_scanned": 124,
+      "called_windows": 12,
+      "merged_regions": 6,
+      "maximum_score": 0.5849625007211562,
+      "candidates": {
+        "Region A": {
+          "start_bp": 20304000,
+          "end_bp": 20320000,
+          "width_bins": 5,
+          "reference_width_bins": 6.0,
+          "score": 0.2630344058337938,
+          "called": true,
+          "reference_windows": 121,
+          "total_contacts": 1020
+        },
+        "Region B": {
+          "start_bp": 20744000,
+          "end_bp": 20760000,
+          "width_bins": 5,
+          "reference_width_bins": 6.0,
+          "score": 0.2630344058337938,
+          "called": true,
+          "reference_windows": 121,
+          "total_contacts": 1320
+        }
+      }
+    },
+    {
+      "window_bins": 32,
+      "window_bp": 16000,
+      "max_separation_bins": 32,
+      "max_separation_bp": 16000,
+      "cumulative_fraction": 0.8,
+      "windows_scanned": 124,
+      "called_windows": 5,
+      "merged_regions": 3,
+      "maximum_score": 0.5145731728297582,
+      "candidates": {
+        "Region A": {
+          "start_bp": 20304000,
+          "end_bp": 20320000,
+          "width_bins": 9,
+          "reference_width_bins": 10.0,
+          "score": 0.15200309344505006,
+          "called": false,
+          "reference_windows": 121,
+          "total_contacts": 1020
+        },
+        "Region B": {
+          "start_bp": 20744000,
+          "end_bp": 20760000,
+          "width_bins": 8,
+          "reference_width_bins": 10.0,
+          "score": 0.32192809488736235,
+          "called": true,
+          "reference_windows": 121,
+          "total_contacts": 1320
+        }
+      }
+    },
+    {
+      "window_bins": 32,
+      "window_bp": 16000,
+      "max_separation_bins": 32,
+      "max_separation_bp": 16000,
+      "cumulative_fraction": 0.9,
+      "windows_scanned": 124,
+      "called_windows": 4,
+      "merged_regions": 3,
+      "maximum_score": 0.36257007938470837,
+      "candidates": {
+        "Region A": {
+          "start_bp": 20304000,
+          "end_bp": 20320000,
+          "width_bins": 18,
+          "reference_width_bins": 18.0,
+          "score": 0.0,
+          "called": false,
+          "reference_windows": 121,
+          "total_contacts": 1020
+        },
+        "Region B": {
+          "start_bp": 20744000,
+          "end_bp": 20760000,
+          "width_bins": 19,
+          "reference_width_bins": 18.0,
+          "score": -0.07800251200127321,
+          "called": false,
+          "reference_windows": 121,
+          "total_contacts": 1320
+        }
+      }
+    },
+    {
+      "window_bins": 64,
+      "window_bp": 32000,
+      "max_separation_bins": 32,
+      "max_separation_bp": 16000,
+      "cumulative_fraction": 0.7,
+      "windows_scanned": 122,
+      "called_windows": 5,
+      "merged_regions": 3,
+      "maximum_score": 0.2630344058337938,
+      "candidates": {
+        "Region A": {
+          "start_bp": 20296000,
+          "end_bp": 20328000,
+          "width_bins": 5,
+          "reference_width_bins": 6.0,
+          "score": 0.2630344058337938,
+          "called": true,
+          "reference_windows": 115,
+          "total_contacts": 2252
+        },
+        "Region B": {
+          "start_bp": 20736000,
+          "end_bp": 20768000,
+          "width_bins": 5,
+          "reference_width_bins": 6.0,
+          "score": 0.2630344058337938,
+          "called": true,
+          "reference_windows": 115,
+          "total_contacts": 4291
+        }
+      }
+    },
+    {
+      "window_bins": 64,
+      "window_bp": 32000,
+      "max_separation_bins": 32,
+      "max_separation_bp": 16000,
+      "cumulative_fraction": 0.8,
+      "windows_scanned": 122,
+      "called_windows": 1,
+      "merged_regions": 1,
+      "maximum_score": 0.32192809488736235,
+      "candidates": {
+        "Region A": {
+          "start_bp": 20296000,
+          "end_bp": 20328000,
+          "width_bins": 9,
+          "reference_width_bins": 10.0,
+          "score": 0.15200309344505006,
+          "called": false,
+          "reference_windows": 115,
+          "total_contacts": 2252
+        },
+        "Region B": {
+          "start_bp": 20736000,
+          "end_bp": 20768000,
+          "width_bins": 8,
+          "reference_width_bins": 10.0,
+          "score": 0.32192809488736235,
+          "called": true,
+          "reference_windows": 115,
+          "total_contacts": 4291
+        }
+      }
+    },
+    {
+      "window_bins": 64,
+      "window_bp": 32000,
+      "max_separation_bins": 32,
+      "max_separation_bp": 16000,
+      "cumulative_fraction": 0.9,
+      "windows_scanned": 122,
+      "called_windows": 1,
+      "merged_regions": 1,
+      "maximum_score": 0.2630344058337938,
+      "candidates": {
+        "Region A": {
+          "start_bp": 20296000,
+          "end_bp": 20328000,
+          "width_bins": 16,
+          "reference_width_bins": 18.0,
+          "score": 0.16992500144231237,
+          "called": false,
+          "reference_windows": 115,
+          "total_contacts": 2252
+        },
+        "Region B": {
+          "start_bp": 20736000,
+          "end_bp": 20768000,
+          "width_bins": 15,
+          "reference_width_bins": 18.0,
+          "score": 0.2630344058337938,
+          "called": true,
+          "reference_windows": 115,
+          "total_contacts": 4291
+        }
+      }
+    },
+    {
+      "window_bins": 64,
+      "window_bp": 32000,
+      "max_separation_bins": 48,
+      "max_separation_bp": 24000,
+      "cumulative_fraction": 0.7,
+      "windows_scanned": 122,
+      "called_windows": 3,
+      "merged_regions": 2,
+      "maximum_score": 0.41503749927884376,
+      "candidates": {
+        "Region A": {
+          "start_bp": 20296000,
+          "end_bp": 20328000,
+          "width_bins": 7,
+          "reference_width_bins": 8.0,
+          "score": 0.19264507794239583,
+          "called": false,
+          "reference_windows": 115,
+          "total_contacts": 2389
+        },
+        "Region B": {
+          "start_bp": 20736000,
+          "end_bp": 20768000,
+          "width_bins": 6,
+          "reference_width_bins": 8.0,
+          "score": 0.41503749927884376,
+          "called": true,
+          "reference_windows": 115,
+          "total_contacts": 4526
+        }
+      }
+    },
+    {
+      "window_bins": 64,
+      "window_bp": 32000,
+      "max_separation_bins": 48,
+      "max_separation_bp": 24000,
+      "cumulative_fraction": 0.8,
+      "windows_scanned": 122,
+      "called_windows": 1,
+      "merged_regions": 1,
+      "maximum_score": 0.24100809950379498,
+      "candidates": {
+        "Region A": {
+          "start_bp": 20296000,
+          "end_bp": 20328000,
+          "width_bins": 12,
+          "reference_width_bins": 13.0,
+          "score": 0.11547721741993588,
+          "called": false,
+          "reference_windows": 115,
+          "total_contacts": 2389
+        },
+        "Region B": {
+          "start_bp": 20736000,
+          "end_bp": 20768000,
+          "width_bins": 11,
+          "reference_width_bins": 13.0,
+          "score": 0.24100809950379498,
+          "called": true,
+          "reference_windows": 115,
+          "total_contacts": 4526
+        }
+      }
+    },
+    {
+      "window_bins": 64,
+      "window_bp": 32000,
+      "max_separation_bins": 48,
+      "max_separation_bp": 24000,
+      "cumulative_fraction": 0.9,
+      "windows_scanned": 122,
+      "called_windows": 1,
+      "merged_regions": 1,
+      "maximum_score": 0.24100809950379498,
+      "candidates": {
+        "Region A": {
+          "start_bp": 20296000,
+          "end_bp": 20328000,
+          "width_bins": 24,
+          "reference_width_bins": 25.0,
+          "score": 0.058893689053568614,
+          "called": false,
+          "reference_windows": 115,
+          "total_contacts": 2389
+        },
+        "Region B": {
+          "start_bp": 20736000,
+          "end_bp": 20768000,
+          "width_bins": 22,
+          "reference_width_bins": 26.0,
+          "score": 0.24100809950379498,
+          "called": true,
+          "reference_windows": 115,
+          "total_contacts": 4526
+        }
+      }
+    },
+    {
+      "window_bins": 64,
+      "window_bp": 32000,
+      "max_separation_bins": 64,
+      "max_separation_bp": 32000,
+      "cumulative_fraction": 0.7,
+      "windows_scanned": 122,
+      "called_windows": 2,
+      "merged_regions": 2,
+      "maximum_score": 0.36257007938470837,
+      "candidates": {
+        "Region A": {
+          "start_bp": 20296000,
+          "end_bp": 20328000,
+          "width_bins": 7,
+          "reference_width_bins": 9.0,
+          "score": 0.36257007938470837,
+          "called": true,
+          "reference_windows": 115,
+          "total_contacts": 2478
+        },
+        "Region B": {
+          "start_bp": 20736000,
+          "end_bp": 20768000,
+          "width_bins": 7,
+          "reference_width_bins": 9.0,
+          "score": 0.36257007938470837,
+          "called": true,
+          "reference_windows": 115,
+          "total_contacts": 4695
+        }
+      }
+    },
+    {
+      "window_bins": 64,
+      "window_bp": 32000,
+      "max_separation_bins": 64,
+      "max_separation_bp": 32000,
+      "cumulative_fraction": 0.8,
+      "windows_scanned": 122,
+      "called_windows": 5,
+      "merged_regions": 2,
+      "maximum_score": 0.38702312310924725,
+      "candidates": {
+        "Region A": {
+          "start_bp": 20296000,
+          "end_bp": 20328000,
+          "width_bins": 14,
+          "reference_width_bins": 17.0,
+          "score": 0.2801079191927352,
+          "called": true,
+          "reference_windows": 115,
+          "total_contacts": 2478
+        },
+        "Region B": {
+          "start_bp": 20736000,
+          "end_bp": 20768000,
+          "width_bins": 13,
+          "reference_width_bins": 17.0,
+          "score": 0.38702312310924725,
+          "called": true,
+          "reference_windows": 115,
+          "total_contacts": 4695
+        }
+      }
+    },
+    {
+      "window_bins": 64,
+      "window_bp": 32000,
+      "max_separation_bins": 64,
+      "max_separation_bp": 32000,
+      "cumulative_fraction": 0.9,
+      "windows_scanned": 122,
+      "called_windows": 3,
+      "merged_regions": 3,
+      "maximum_score": 0.289506617194985,
+      "candidates": {
+        "Region A": {
+          "start_bp": 20296000,
+          "end_bp": 20328000,
+          "width_bins": 30,
+          "reference_width_bins": 33.0,
+          "score": 0.13750352374993502,
+          "called": false,
+          "reference_windows": 115,
+          "total_contacts": 2478
+        },
+        "Region B": {
+          "start_bp": 20736000,
+          "end_bp": 20768000,
+          "width_bins": 29,
+          "reference_width_bins": 33.0,
+          "score": 0.18641312423088138,
+          "called": false,
+          "reference_windows": 115,
+          "total_contacts": 4695
+        }
+      }
+    },
+    {
+      "window_bins": 96,
+      "window_bp": 48000,
+      "max_separation_bins": 32,
+      "max_separation_bp": 16000,
+      "cumulative_fraction": 0.7,
+      "windows_scanned": 120,
+      "called_windows": 2,
+      "merged_regions": 1,
+      "maximum_score": 0.2630344058337938,
+      "candidates": {
+        "Region A": {
+          "start_bp": 20288000,
+          "end_bp": 20336000,
+          "width_bins": 6,
+          "reference_width_bins": 6.0,
+          "score": 0.0,
+          "called": false,
+          "reference_windows": 109,
+          "total_contacts": 3147
+        },
+        "Region B": {
+          "start_bp": 20728000,
+          "end_bp": 20776000,
+          "width_bins": 6,
+          "reference_width_bins": 6.0,
+          "score": 0.0,
+          "called": false,
+          "reference_windows": 109,
+          "total_contacts": 7272
+        }
+      }
+    },
+    {
+      "window_bins": 96,
+      "window_bp": 48000,
+      "max_separation_bins": 32,
+      "max_separation_bp": 16000,
+      "cumulative_fraction": 0.8,
+      "windows_scanned": 120,
+      "called_windows": 0,
+      "merged_regions": 0,
+      "maximum_score": 0.15200309344505006,
+      "candidates": {
+        "Region A": {
+          "start_bp": 20288000,
+          "end_bp": 20336000,
+          "width_bins": 9,
+          "reference_width_bins": 10.0,
+          "score": 0.15200309344505006,
+          "called": false,
+          "reference_windows": 109,
+          "total_contacts": 3147
+        },
+        "Region B": {
+          "start_bp": 20728000,
+          "end_bp": 20776000,
+          "width_bins": 9,
+          "reference_width_bins": 10.0,
+          "score": 0.15200309344505006,
+          "called": false,
+          "reference_windows": 109,
+          "total_contacts": 7272
+        }
+      }
+    },
+    {
+      "window_bins": 96,
+      "window_bp": 48000,
+      "max_separation_bins": 32,
+      "max_separation_bp": 16000,
+      "cumulative_fraction": 0.9,
+      "windows_scanned": 120,
+      "called_windows": 0,
+      "merged_regions": 0,
+      "maximum_score": 0.16992500144231237,
+      "candidates": {
+        "Region A": {
+          "start_bp": 20288000,
+          "end_bp": 20336000,
+          "width_bins": 17,
+          "reference_width_bins": 18.0,
+          "score": 0.08246216019197297,
+          "called": false,
+          "reference_windows": 109,
+          "total_contacts": 3147
+        },
+        "Region B": {
+          "start_bp": 20728000,
+          "end_bp": 20776000,
+          "width_bins": 17,
+          "reference_width_bins": 18.0,
+          "score": 0.08246216019197297,
+          "called": false,
+          "reference_windows": 109,
+          "total_contacts": 7272
+        }
+      }
+    },
+    {
+      "window_bins": 96,
+      "window_bp": 48000,
+      "max_separation_bins": 48,
+      "max_separation_bp": 24000,
+      "cumulative_fraction": 0.7,
+      "windows_scanned": 120,
+      "called_windows": 1,
+      "merged_regions": 1,
+      "maximum_score": 0.41503749927884376,
+      "candidates": {
+        "Region A": {
+          "start_bp": 20288000,
+          "end_bp": 20336000,
+          "width_bins": 7,
+          "reference_width_bins": 8.0,
+          "score": 0.19264507794239583,
+          "called": false,
+          "reference_windows": 109,
+          "total_contacts": 3356
+        },
+        "Region B": {
+          "start_bp": 20728000,
+          "end_bp": 20776000,
+          "width_bins": 7,
+          "reference_width_bins": 8.0,
+          "score": 0.19264507794239583,
+          "called": false,
+          "reference_windows": 109,
+          "total_contacts": 7682
+        }
+      }
+    },
+    {
+      "window_bins": 96,
+      "window_bp": 48000,
+      "max_separation_bins": 48,
+      "max_separation_bp": 24000,
+      "cumulative_fraction": 0.8,
+      "windows_scanned": 120,
+      "called_windows": 1,
+      "merged_regions": 1,
+      "maximum_score": 0.24100809950379498,
+      "candidates": {
+        "Region A": {
+          "start_bp": 20288000,
+          "end_bp": 20336000,
+          "width_bins": 13,
+          "reference_width_bins": 13.0,
+          "score": 0.0,
+          "called": false,
+          "reference_windows": 109,
+          "total_contacts": 3356
+        },
+        "Region B": {
+          "start_bp": 20728000,
+          "end_bp": 20776000,
+          "width_bins": 12,
+          "reference_width_bins": 13.0,
+          "score": 0.11547721741993588,
+          "called": false,
+          "reference_windows": 109,
+          "total_contacts": 7682
+        }
+      }
+    },
+    {
+      "window_bins": 96,
+      "window_bp": 48000,
+      "max_separation_bins": 48,
+      "max_separation_bp": 24000,
+      "cumulative_fraction": 0.9,
+      "windows_scanned": 120,
+      "called_windows": 0,
+      "merged_regions": 0,
+      "maximum_score": 0.17687776208407918,
+      "candidates": {
+        "Region A": {
+          "start_bp": 20288000,
+          "end_bp": 20336000,
+          "width_bins": 25,
+          "reference_width_bins": 26.0,
+          "score": 0.056583528366367514,
+          "called": false,
+          "reference_windows": 109,
+          "total_contacts": 3356
+        },
+        "Region B": {
+          "start_bp": 20728000,
+          "end_bp": 20776000,
+          "width_bins": 24,
+          "reference_width_bins": 26.0,
+          "score": 0.11547721741993588,
+          "called": false,
+          "reference_windows": 109,
+          "total_contacts": 7682
+        }
+      }
+    },
+    {
+      "window_bins": 96,
+      "window_bp": 48000,
+      "max_separation_bins": 64,
+      "max_separation_bp": 32000,
+      "cumulative_fraction": 0.7,
+      "windows_scanned": 120,
+      "called_windows": 0,
+      "merged_regions": 0,
+      "maximum_score": 0.16992500144231237,
+      "candidates": {
+        "Region A": {
+          "start_bp": 20288000,
+          "end_bp": 20336000,
+          "width_bins": 8,
+          "reference_width_bins": 9.0,
+          "score": 0.16992500144231237,
+          "called": false,
+          "reference_windows": 109,
+          "total_contacts": 3510
+        },
+        "Region B": {
+          "start_bp": 20728000,
+          "end_bp": 20776000,
+          "width_bins": 8,
+          "reference_width_bins": 9.0,
+          "score": 0.16992500144231237,
+          "called": false,
+          "reference_windows": 109,
+          "total_contacts": 7951
+        }
+      }
+    },
+    {
+      "window_bins": 96,
+      "window_bp": 48000,
+      "max_separation_bins": 64,
+      "max_separation_bp": 32000,
+      "cumulative_fraction": 0.8,
+      "windows_scanned": 120,
+      "called_windows": 3,
+      "merged_regions": 2,
+      "maximum_score": 0.2801079191927352,
+      "candidates": {
+        "Region A": {
+          "start_bp": 20288000,
+          "end_bp": 20336000,
+          "width_bins": 16,
+          "reference_width_bins": 17.0,
+          "score": 0.0874628412503394,
+          "called": false,
+          "reference_windows": 109,
+          "total_contacts": 3510
+        },
+        "Region B": {
+          "start_bp": 20728000,
+          "end_bp": 20776000,
+          "width_bins": 14,
+          "reference_width_bins": 17.0,
+          "score": 0.2801079191927352,
+          "called": true,
+          "reference_windows": 109,
+          "total_contacts": 7951
+        }
+      }
+    },
+    {
+      "window_bins": 96,
+      "window_bp": 48000,
+      "max_separation_bins": 64,
+      "max_separation_bp": 32000,
+      "cumulative_fraction": 0.9,
+      "windows_scanned": 120,
+      "called_windows": 0,
+      "merged_regions": 0,
+      "maximum_score": 0.18641312423088138,
+      "candidates": {
+        "Region A": {
+          "start_bp": 20288000,
+          "end_bp": 20336000,
+          "width_bins": 33,
+          "reference_width_bins": 33.0,
+          "score": 0.0,
+          "called": false,
+          "reference_windows": 109,
+          "total_contacts": 3510
+        },
+        "Region B": {
+          "start_bp": 20728000,
+          "end_bp": 20776000,
+          "width_bins": 29,
+          "reference_width_bins": 33.0,
+          "score": 0.18641312423088138,
+          "called": false,
+          "reference_windows": 109,
+          "total_contacts": 7951
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Candidate centers selected from observed baseline data",
+    "Comparisons are descriptive and exploratory",
+    "Wq values across different q or Dmax have different definitions",
+    "Original QC status remains unassessed",
+    "Independent genomic missing-bin validity not established",
+    "No biological significance or error-rate calibration"
+  ]
+}
