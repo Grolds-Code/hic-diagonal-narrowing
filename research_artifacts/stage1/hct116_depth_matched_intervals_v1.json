@@ -1,0 +1,55 @@
+{
+  "experiment": "depth_matched_poisson_intervals_under_joint_thinning",
+  "source_sha256": "fb01bc848b4fecb342a450b8d87165393a89de019fc27c82e72d8519c07f5de5",
+  "seed": 20261023,
+  "replicates_per_depth": 100,
+  "summaries": {
+    "0.25": {
+      "retention": 0.25,
+      "replicates": 100,
+      "windows": 122,
+      "original_thinning_quantiles_reproduced": 122,
+      "conditional_baseline_inclusion_fraction": 0.9917213114754099,
+      "median_depth_matched_interval_span_bins": 6.0,
+      "p90_depth_matched_interval_span_bins": 8.0,
+      "candidates": {
+        "Region A": {
+          "baseline_w80_bins": 14,
+          "conditional_inclusion_fraction": 0.99,
+          "median_interval_span_bins": 7.0,
+          "median_thinned_w80_bins": 14.0
+        },
+        "Region B": {
+          "baseline_w80_bins": 13,
+          "conditional_inclusion_fraction": 1.0,
+          "median_interval_span_bins": 4.0,
+          "median_thinned_w80_bins": 13.0
+        }
+      }
+    },
+    "0.1": {
+      "retention": 0.1,
+      "replicates": 100,
+      "windows": 122,
+      "original_thinning_quantiles_reproduced": 122,
+      "conditional_baseline_inclusion_fraction": 0.9850819672131148,
+      "median_depth_matched_interval_span_bins": 9.0,
+      "p90_depth_matched_interval_span_bins": 14.0,
+      "candidates": {
+        "Region A": {
+          "baseline_w80_bins": 14,
+          "conditional_inclusion_fraction": 1.0,
+          "median_interval_span_bins": 11.0,
+          "median_thinned_w80_bins": 14.0
+        },
+        "Region B": {
+          "baseline_w80_bins": 13,
+          "conditional_inclusion_fraction": 0.98,
+          "median_interval_span_bins": 7.0,
+          "median_thinned_w80_bins": 13.0
+        }
+      }
+    }
+  },
+  "interpretation": "Conditional inclusion of full-depth empirical W80 under joint binomial thinning. Not biological confidence-interval calibration."
+}

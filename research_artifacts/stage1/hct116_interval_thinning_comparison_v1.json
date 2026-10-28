@@ -1,0 +1,42 @@
+{
+  "analysis": "descriptive_full_depth_interval_vs_thinning",
+  "thinning_source_sha256": "fb01bc848b4fecb342a450b8d87165393a89de019fc27c82e72d8519c07f5de5",
+  "comparison_by_retention": {
+    "0.5": {
+      "windows": 122,
+      "median_full_depth_model_span_bins": 3.0,
+      "median_thinning_90pct_span_bins": 2.0249999999999986,
+      "fraction_thinning_envelopes_inside_full_interval": 0.9836065573770492,
+      "fraction_thinning_medians_inside_full_interval": 1.0
+    },
+    "0.25": {
+      "windows": 122,
+      "median_full_depth_model_span_bins": 3.0,
+      "median_thinning_90pct_span_bins": 4.0,
+      "fraction_thinning_envelopes_inside_full_interval": 0.12295081967213115,
+      "fraction_thinning_medians_inside_full_interval": 1.0
+    },
+    "0.1": {
+      "windows": 122,
+      "median_full_depth_model_span_bins": 3.0,
+      "median_thinning_90pct_span_bins": 7.0,
+      "fraction_thinning_envelopes_inside_full_interval": 0.0,
+      "fraction_thinning_medians_inside_full_interval": 1.0
+    },
+    "0.05": {
+      "windows": 122,
+      "median_full_depth_model_span_bins": 3.0,
+      "median_thinning_90pct_span_bins": 10.049999999999997,
+      "fraction_thinning_envelopes_inside_full_interval": 0.0,
+      "fraction_thinning_medians_inside_full_interval": 1.0
+    },
+    "0.01": {
+      "windows": 122,
+      "median_full_depth_model_span_bins": 3.0,
+      "median_thinning_90pct_span_bins": 22.099999999999994,
+      "fraction_thinning_envelopes_inside_full_interval": 0.0,
+      "fraction_thinning_medians_inside_full_interval": 0.9098360655737705
+    }
+  },
+  "limitation": "Thinning quantile envelopes condition on observed source counts; full-depth model confidence intervals concern a model-defined target. Containment is not CI coverage."
+}

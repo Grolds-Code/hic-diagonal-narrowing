@@ -1,0 +1,49 @@
+{
+  "analysis": "descriptive_unmasked_pair_heterogeneity",
+  "source_sha256": "fb01bc848b4fecb342a450b8d87165393a89de019fc27c82e72d8519c07f5de5",
+  "profile_sha256": "b9205d00020568e038be3bbb42dfde3644d00cb86dcff127c1ea7f0abedf662f",
+  "source_checksum_verified": true,
+  "profile_checksum_verified": true,
+  "w80_windows_reproduced": 122,
+  "distance_bands_total": 7808,
+  "distance_bands_with_positive_signal": 7807,
+  "distance_bands_with_zero_signal": 1,
+  "candidate_pair_count": 499712,
+  "positive_pair_count": 170785,
+  "positive_pair_fraction": 0.341766857710041,
+  "median_pair_fano": 1.0924775707384402,
+  "p90_pair_fano": 1.5455455455455462,
+  "fraction_fano_above_2": 0.033431535801204046,
+  "fraction_fano_above_5": 0.0025618035096708082,
+  "regions": {
+    "Region A": {
+      "interval_bp": [
+        20296000,
+        20328000
+      ],
+      "w80_bins": 14,
+      "positive_pair_fraction": 0.23583984375,
+      "bands_with_positive_signal": 64,
+      "median_pair_fano": 1.1428571428571428,
+      "p90_pair_fano": 1.6477124183006535
+    },
+    "Region B": {
+      "interval_bp": [
+        20736000,
+        20768000
+      ],
+      "w80_bins": 13,
+      "positive_pair_fraction": 0.3037109375,
+      "bands_with_positive_signal": 64,
+      "median_pair_fano": 1.2120181405895691,
+      "p90_pair_fano": 2.337494547964114
+    }
+  },
+  "limitations": [
+    "Unmasked pairs include assumed implicit zeros",
+    "Overlapping windows reuse genomic contact pairs",
+    "Genomic pair heterogeneity can inflate Fano ratios",
+    "A single pooled matrix cannot estimate biological replicate variance",
+    "This is not a formal Poisson goodness-of-fit test"
+  ]
+}
