@@ -22,8 +22,8 @@ Across the evaluated windows:
 
 - Contact totals: 1737 to 8102.
 - Pair occupancy: 0.1765 to 0.5300.
-- W80: 13 to 20 bins.
-- All W80 values are finite and positive.
+- $W_{80}$: 13 to 20 bins.
+- All $W_{80}$ values are finite and positive.
 - All windows contain positive recorded contact signal.
 
 These observations demonstrate computable descriptive profiles.
@@ -34,8 +34,8 @@ They do not constitute a formal QC pass.
 | Quantity | Region A | Region B |
 |---|---:|---:|
 | Peak start (bp) | 20296000 | 20736000 |
-| W80 (bins) | 14 | 13 |
-| W80 (bp) | 7000 | 6500 |
+| $W_{80}$ (bins) | 14 | 13 |
+| $W_{80}$ (bp) | 7000 | 6500 |
 | Total contacts | 2478 | 4695 |
 | Pair occupancy | 0.235840 | 0.303711 |
 | Supported distance bands | 64 | 64 |
@@ -46,7 +46,7 @@ that band, not that all genomic bins are independently verified.
 
 ## 4. What has been validated
 
-- Original W80 profiles independently reproduced from source contacts.
+- Original $W_{80}$ profiles independently reproduced from source contacts.
 - Midpoint-based contact geometry audited.
 - Synthetic coverage-loss and depth-stress experiments performed.
 - Real HCT116 technical thinning and joint candidate-score sensitivity performed.
@@ -66,7 +66,7 @@ They do not establish biological significance.
 5. Biological significance after selection across the genomic scan.
 6. Precise structural boundaries or direct chromatin-compaction measurements.
 
-In particular, a narrow W80 alone cannot be interpreted as
+In particular, a narrow $W_{80}$ alone cannot be interpreted as
 physical chromatin compaction.
 
 ## 6. Stage 1 reporting policy

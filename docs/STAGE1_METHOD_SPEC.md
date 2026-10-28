@@ -11,18 +11,18 @@ from coverage limitations and technical artifacts.
 
 ## 2. Initial mathematical approach
 
-For a genomic window W:
+For a genomic window $W$:
 
 1. Select valid cis-contact pairs whose genomic midpoint
-   falls inside W.
+   falls inside $W$.
 2. Restrict contact separation to a fixed range:
-   0 < d <= D_max.
+   $0 < d \le D_{\max}$.
 3. Calculate mean observed contact intensity at each
-   separation d, accounting for the number of valid
+   separation $d$, accounting for the number of valid
    bin pairs available at that separation.
 4. Normalize these intensities into a local
    contact-distance distribution.
-5. Define width W80 as the separation containing 80%
+5. Define width $W_{80}$ as the separation containing 80%
    of the cumulative contact-distance signal.
 
 The 80% threshold, window size, and maximum separation
@@ -32,7 +32,9 @@ are provisional parameters requiring sensitivity analysis.
 
 Initial proposal:
 
-score = log2(reference_width / local_width)
+$$
+S(W) = \log_2\left(\frac{W_{80}^{\mathrm{ref}}(W)}{W_{80}(W)}\right)
+$$
 
 Positive scores indicate narrower local contact profiles.
 
@@ -71,7 +73,7 @@ Before applying the detector genome-wide:
 
 ## 7. Scientific limitations
 
-W80 is an operational width statistic, not a direct
+$W_{80}$ is an operational width statistic, not a direct
 measurement of physical chromatin compaction.
 
 Biological interpretation requires additional validation.

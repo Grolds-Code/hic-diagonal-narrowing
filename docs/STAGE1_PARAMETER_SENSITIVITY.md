@@ -16,9 +16,9 @@ test or a post-selection significance calculation.
 - Resolution: 500 bp.
 - Window sizes: 16, 32, and 48 kb.
 - Maximum contact separations: 16, 24, and 32 kb.
-- Cumulative-intensity fractions: 0.70, 0.80, and 0.90.
+- Cumulative-intensity fractions: $q \in \{0.70, 0.80, 0.90\}$.
 - Genomic scan step: 8 kb.
-- Original narrowing-score threshold: 0.2.
+- Original narrowing-score threshold: $S(W) > 0.2$.
 - Maximum separation must not exceed window length.
 - Valid parameter configurations: 21.
 - Original candidate centers were held fixed.
@@ -27,7 +27,7 @@ All profiles use midpoint-assigned contacts and the
 original detector's non-overlapping reference rule.
 
 Changing the cumulative-intensity fraction changes the
-width estimand. Results across W70, W80, and W90 therefore
+width estimand. Results across $W_{70}$, $W_{80}$, and $W_{90}$ therefore
 represent sensitivity to the estimand definition.
 
 ## 3. Baseline verification
@@ -38,8 +38,8 @@ and 80% cumulative fraction reproduced:
 - 122 genomic windows.
 - Five called windows.
 - Two merged candidate regions.
-- Region A W80 = 14 bins.
-- Region B W80 = 13 bins.
+- Region A: $W_{80} = 14$ bins.
+- Region B: $W_{80} = 13$ bins.
 
 Baseline reconstruction: PASS.
 
