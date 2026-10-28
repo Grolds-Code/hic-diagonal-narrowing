@@ -32,9 +32,10 @@ are provisional parameters requiring sensitivity analysis.
 
 Initial proposal:
 
-$$
+```math
 S(W) = \log_2\left(\frac{W_{80}^{\mathrm{ref}}(W)}{W_{80}(W)}\right)
-$$
+```
+
 
 Positive scores indicate narrower local contact profiles.
 

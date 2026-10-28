@@ -20,14 +20,15 @@ $d$.
 
 For observed aggregate contact count $Y_d$, define
 
-$$
+```math
 \widehat{\mu}_d=Y_d/K_d.
-$$
+```
+
 
 For a nonnegative intensity profile $\boldsymbol{\mu}$
 with strictly positive total intensity, define
 
-$$
+```math
 W_{80}(\boldsymbol{\mu})
 =
 \min\left\{
@@ -35,7 +36,8 @@ w:
 \frac{\sum_{d=1}^{w}\mu_d}
 {\sum_{d=1}^{D}\mu_d}\geq 0.8
 \right\}.
-$$
+```
+
 
 The empirical $W_{80}$ substitutes the distance-normalized
 observed counts for the unknown intensities.
@@ -51,16 +53,18 @@ specified mask, when a mask is used.
 Assume fixed exposure counts $K_d$ and independent
 distance-band counts
 
-$$
-Y_d\sim\operatorname{Poisson}(K_d\mu_d).
-$$
+```math
+Y_d\sim\mathrm{Poisson}(K_d\mu_d).
+```
+
 
 Here $\mu_d$ is the fixed underlying mean count per
 eligible pair, and the target is
 
-$$
+```math
 W_{\mathrm{fixed}}=W_{80}(\boldsymbol{\mu}).
-$$
+```
+
 
 Conditional on total count $N=\sum_d Y_d>0$, the
 distance-band counts follow a multinomial distribution with
@@ -84,17 +88,19 @@ actual coverage may exceed the nominal confidence level.
 Suppose pair $i$ at distance $d$ has a fixed intensity
 $\lambda_{di}$, and pair counts are independent Poisson:
 
-$$
-X_{di}\sim\operatorname{Poisson}(\lambda_{di}).
-$$
+```math
+X_{di}\sim\mathrm{Poisson}(\lambda_{di}).
+```
+
 
 Then
 
-$$
+```math
 Y_d=\sum_i X_{di}
-\sim\operatorname{Poisson}
+\sim\mathrm{Poisson}
 \left(\sum_i\lambda_{di}\right).
-$$
+```
+
 
 Consequently, unequal fixed pair-specific Poisson
 intensities do not by themselves violate the
@@ -102,11 +108,12 @@ independent-Poisson band-sum model.
 
 For this fixed map, the relevant intensity is
 
-$$
+```math
 \mu_d^{\mathrm{map}}
 =
 \frac{1}{K_d}\sum_i\lambda_{di}.
-$$
+```
+
 
 The associated target is the $W_{80}$ of this fixed map's
 distance-normalized intensity profile.
@@ -123,10 +130,11 @@ distance-band intensities.
 
 Conditional on $Z$, suppose
 
-$$
+```math
 Y_d\mid Z
-\sim\operatorname{Poisson}(K_d\mu_d(Z))
-$$
+\sim\mathrm{Poisson}(K_d\mu_d(Z))
+```
+
 
 independently across distance bands.
 
@@ -134,29 +142,32 @@ Two scientifically different targets arise.
 
 **Realized-state target:**
 
-$$
+```math
 W_{\mathrm{latent}}(Z)
 =
 W_{80}\left(\boldsymbol{\mu}(Z)\right).
-$$
+```
+
 
 **Population-mean target:**
 
-$$
+```math
 W_{\mathrm{population}}
 =
 W_{80}\left(
 \mathbb{E}_{Z}[\boldsymbol{\mu}(Z)]
 \right).
-$$
+```
+
 
 In general,
 
-$$
+```math
 W_{80}\left(\mathbb{E}_{Z}[\boldsymbol{\mu}(Z)]\right)
 \neq
 W_{80}\left(\boldsymbol{\mu}(Z)\right).
-$$
+```
+
 
 The $W_{80}$ functional is nonlinear, and a random realized
 state can move the target across discrete separation bins.
