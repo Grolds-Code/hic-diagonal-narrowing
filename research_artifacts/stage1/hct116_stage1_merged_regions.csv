@@ -1,0 +1,3 @@
+chromosome,start_bp,end_bp,peak_start_bp,peak_end_bp,peak_w80_bins,peak_score,supporting_windows,qc_status
+chr10,20296000,20336000,20296000,20328000,14.0,0.2801079191927352,2,unassessed
+chr10,20720000,20792000,20736000,20768000,13.0,0.38702312310924725,3,unassessed

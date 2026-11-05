@@ -1,0 +1,6 @@
+region,start_bp,end_bp,zero_contact_bins,original_w80_bp,masked_w80_bp,w80_change_bp,masked_eligible_pairs,remaining_eligible_pairs,min_pairs_per_distance,original_total_contacts,original_observed_pairs,formal_qc_status
+R1,20298500,20330500,0,7000,7000,0,0,4096,64,2626,1011,unassessed
+R2,20427500,20459500,0,7000,7000,0,0,4096,64,2972,1107,unassessed
+R3,20532500,20564500,1,7000,7000,0,92,4004,62,2013,798,unassessed
+R4,20572500,20604500,0,7000,7000,0,0,4096,64,3643,1215,unassessed
+R5,20736500,20768500,6,6500,6500,0,696,3400,52,4702,1241,unassessed

@@ -622,3 +622,15 @@ Detected narrowing candidates must not be interpreted as functional regulatory b
 All reported candidate regions and statistical comparisons should be interpreted within the stated experimental assumptions and limitations.
 
 **No biological significance is assumed from detection alone.**
+
+## Stage 1: Real HCT116 detector demonstration
+
+The [Stage 1 detector handoff](docs/STAGE1_DETECTOR_HANDOFF.md)
+contains the 500-bp HCT116 example, genomic candidate
+coordinates, narrowing scores, contact-map figures, quality
+measurements, and reproducibility instructions.
+
+The results are exploratory. The detector uses 32-kb
+measurement windows and a 500-bp scan step; this does not
+establish 500-bp boundary precision. Formal genomic QC
+and biological validation remain outstanding.
