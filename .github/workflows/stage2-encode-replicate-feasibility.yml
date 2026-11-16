@@ -1,0 +1,35 @@
+name: Stage 2 ENCODE replicate feasibility
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "experiments/stage2_encode_replicate_inventory.py"
+      - "tests/test_stage2_encode_inventory.py"
+      - ".github/workflows/stage2-encode-replicate-feasibility.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test inventory logic offline
+        run: python -m unittest discover -s tests -p "test_stage2_encode_inventory.py" -v
+      - name: Query ENCODE metadata only
+        run: |
+          python experiments/stage2_encode_replicate_inventory.py \
+            --output stage2_ci_artifacts/encode_replicate_inventory_v1.json
+      - name: Upload JSON metadata inventory
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage2-encode-replicate-inventory
+          path: stage2_ci_artifacts/encode_replicate_inventory_v1.json
+          if-no-files-found: warn
