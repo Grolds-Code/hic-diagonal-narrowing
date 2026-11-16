@@ -26,7 +26,7 @@ def parse_bgzf_prefix(raw: bytes) -> tuple[bytes, int]:
     index = 0
     blocks = 0
     while index + 18 <= len(raw):
-        if raw[index:index + 3] != b"\\x1f\\x8b\\x08":
+        if raw[index:index + 3] != b"\x1f\x8b\x08":
             raise ValueError("Invalid BGZF/GZIP member magic")
         if raw[index + 3] & 4 == 0:
             raise ValueError("BGZF FEXTRA flag not set")
@@ -65,7 +65,7 @@ def parse_bgzf_prefix(raw: bytes) -> tuple[bytes, int]:
 def describe_bam_prefix(raw: bytes) -> dict:
     """Parse BAM header and a bounded count of complete alignments."""
     data, blocks = parse_bgzf_prefix(raw)
-    if len(data) < 12 or data[:4] != b"BAM\\x01":
+    if len(data) < 12 or data[:4] != b"BAM\x01":
         raise ValueError("BGZF prefix is not BAM")
     l_text = struct.unpack_from("<i", data, 4)[0]
     if l_text < 0 or l_text > 2_000_000 or 8 + l_text + 4 > len(data):
@@ -176,7 +176,7 @@ def bounded_download(accession: str, href: str) -> dict:
                 "http_status": response.status,
             }
         content_range = response.headers.get("Content-Range", "")
-        if not re.match(r"^bytes 0-\\d+/\\d+$", content_range):
+        if not re.match(r"^bytes 0-\d+/\d+$", content_range):
             return {
                 "status": "unrecognized_content_range",
                 "content_range": content_range,
