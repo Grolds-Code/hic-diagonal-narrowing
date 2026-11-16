@@ -1,76 +1,106 @@
-# Stage 2 restart: ENCODE replicate feasibility
+# Stage 2 restart: Modal replicate-data and pooled-contact preflight
 
-**Status:** Exploratory metadata audit, not a biological replication result.
+**Status:** Runnable Modal research workflow. Not a biological-replication
+result. Dr. Shamim's Stage 1 QC feedback remains pending.
 
 ## Purpose
 
-Stage 1 identified five candidate narrowing footprints in HCT116 chr10:20–21 Mb
-at 500-bp resolution. Coverage screening provisionally retained R1 and R2,
-while R3–R5 were withheld because of spatial contact-support warnings.
-The retained signals are sensitive to Umap masking, and no formal biological
-validation has been established. See
-[`STAGE1_SUPERVISOR_QC_UPDATE.md`](STAGE1_SUPERVISOR_QC_UPDATE.md).
+Stage 1 found five exploratory HCT116 narrowing footprints at 500-bp
+resolution (GRCh38 chr10:20–21 Mb). A provisional coverage screen retains
+R1 and R2, but mappability changes the calls. R3–R5 have low-support flags.
+See [the Stage 1 supervisor update](STAGE1_SUPERVISOR_QC_UPDATE.md).
 
-We are resuming Stage 2 while awaiting Dr. Shamim's feedback, without
-altering the published Stage 1 results.
+Stage 2 needs a credible candidate/control aggregate comparison and,
+critically, independently processed biological-replicate evidence. We can
+prepare that while retaining the existing untracked local Stage 2 work.
 
-## What this branch actually does
+## Modal implementation
 
-1. Query ENCODE experiment `ENCSR477GZK` and its released-file metadata.
-2. Identify processed Hi-C contact matrices and BAM / pairs products.
-3. Fetch detailed metadata for relevant processed products, including
-   `derived_from` links and replicate-number fields when available.
-4. Save a structured JSON inventory as a **GitHub Actions artifact**.
-5. Test the metadata classification logic using offline unit tests.
-
-No genomic data (FASTQ, BAM, Hi-C or contact counts) are downloaded. The
-workflow is read-only with respect to ENCODE and does not push changes to
-the repository.
-
-Run the audit via the draft PR's GitHub Actions checks, or manually:
+Run from a checkout with existing Modal credentials:
 
 ```bash
-python -m unittest discover -s tests -p "test_stage2_encode_inventory.py" -v
-python experiments/stage2_encode_replicate_inventory.py \
-  --output research_artifacts/stage2/encode_replicate_inventory_v1.json
+modal run modal_hct116_stage2_replicate_preflight.py
 ```
 
-The command refuses to overwrite an existing output.
+This uses Modal **CPU**, not a GPU. It attaches the existing
+`hic-diagonal-narrowing-data` Volume at `/research` and does **not**
+write to it. It reads:
 
-## Interpretation guardrails
+- `/research/matrices/hct116_chr10_20000000_21000000_500bp_midpoint_32kb.npz`
+- `/research/metadata/hct116_chr10_20000000_21000000_500bp_midpoint_32kb.json`
+- The version-controlled Stage 1
+  `research_artifacts/stage1/hct116_stage1_coverage_triage_v1.csv`
 
-- Replicate labels alone do not establish that a contact matrix is
-  independently processed or suitable for biological-replicate validation.
-- A matrix derived from multiple alignment files may be pooled.
-- A replicate-specific BAM is not interchangeable with a processed,
-  normalization-compatible replicate-specific contact matrix.
-- Isogenic replicate groups may test reproducibility under shared genetic
-  background, not biological generalization across independent donors or lines.
-- R1 and R2 remain **provisional**; no selected candidate is confirmed as
-  biologically significant.
-- The earlier Stage 2 candidate/control aggregates were drawn from the same
-  discovery matrix and are descriptive, not independent validation.
+The remote function:
 
-## Work intentionally not included in this PR
+1. Verifies the extraction SHA256 against the pinned Stage 1 source and
+   its provenance metadata.
+2. Recomputes all 1,937 original midpoint-assigned W80 measurements
+   (32-kb windows at 500-bp steps) and checks their contact totals against
+   the archived Stage 1 table.
+3. Confirms the 93 original candidate windows and 25 provisional
+   coverage-screened calls (23 R1, 2 R2).
+4. Queries ENCODE `ENCSR477GZK` public **metadata only** and checks
+   processed contact products, individual BAM accessions, replicate
+   labels and source lineage.
+5. Returns JSON to the local Modal entrypoint, which saves it as
+   `research_artifacts/stage2/hct116_stage2_modal_replicate_preflight_v1.json`.
 
-Local untracked artifacts from the previous Stage 2 exploration are **not**
-present on GitHub: `modal_hct116_stage2_aggregate.py`,
-`modal_hct116_stage2_umap_audit.py`, `stage2_prepare_aggregate_manifest.py`,
-`stage2_plot_aggregates.py`, `figures/stage2/`, and
-`research_artifacts/stage2/`. This branch does not reconstruct, overwrite,
-or claim to validate those files.
+The output filename is deliberately new. The script fails if it exists
+already. Do not rename existing Stage 2 results or overwrite them.
 
-## Next decision after metadata inspection
+**No BAM, FASTQ, .pairs or .hic file is downloaded.** Only the existing
+small pooled 500-bp extracted .npz is read from Modal, plus remote ENCODE
+metadata records. There is no expensive GPU allocation or background
+deployment in this step.
 
-- **Independent replicate matrices available:** Check assay provenance,
-  normalization, binning, per-replicate coverage, candidate reproducibility,
-  and blind candidate/control comparison.
-- **Only pooled matrices available:** Evaluate whether the linked alignment
-  files permit separate replicate contact extraction without changing the
-  experimental construct.
-- **No suitable separated data available:** Continue a clearly labeled
-  exploratory, coverage- and mappability-matched analysis, and identify
-  independent data needed for biological validation.
+## Tests
 
-Do not merge this preliminary feasibility work into a claim of Stage 2
-biological replication without further verification.
+```bash
+uv run --with numpy --with pytest pytest -q \
+  tests/test_stage2_encode_inventory.py \
+  tests/test_stage2_pooled_preflight.py
+```
+
+Modal execution is not authenticated through the GitHub connection.
+An authenticated Modal CLI is required to start the run. The JSON
+report is created only after a successful remote computation. There is
+no GitHub Actions workflow on this branch.
+
+## Findings already established
+
+A previous **metadata-only GitHub audit** (before switching to Modal)
+identified four .hic records and two separate biological-replicate BAMs.
+The two matrices with explicit lineage each derive from **both** BAMs;
+their pooled-source W80 cannot establish biological replication.
+Other .hic products lack sufficient lineage metadata. Historical
+provenance remains in
+[STAGE2_REPLICATE_FEASIBILITY_FINDINGS.md](STAGE2_REPLICATE_FEASIBILITY_FINDINGS.md).
+The historical GitHub Actions run is not the execution route for
+future analyses.
+
+## Guardrails
+
+- A copied 500-bp W80 result verifies only software and source provenance.
+- R1 and R2 remain exploratory, not validated.
+- Overlapping 32-kb windows are not independent measurements.
+- Two biological-replicate BAMs do not equal two independent Hi-C maps.
+- Biological replicate and control comparisons require
+  comparable processing, coverage and mappability checks.
+- The initial Stage 2 aggregates are descriptive and reside in local
+  **untracked** files. They were not added, modified or reproduced in
+  this PR.
+- Do not call a copy-number deletion or a biological mechanism
+  based solely on contact dropouts.
+
+## Next computational milestone
+
+First establish the schema and data-provenance requirements for deriving
+**two separately processed 500-bp contact maps** from
+`ENCFF624NZV` and `ENCFF583BZD`, without converting mapped Hi-C
+alignments into contact pairs using unjustified assumptions.
+
+Then, only after comparable maps and pre-specified controls are
+available, evaluate R1/R2 W80 reproducibility and error modes per
+replicate. The 200-bp and 100-bp analyses remain separate, pending
+coverage/resolution feasibility checks.
