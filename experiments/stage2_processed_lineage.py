@@ -7,7 +7,7 @@ the pooled .pairs output for comparison.
 No BAM, FASTQ, pairs or .hic payload is downloaded. Only five small
 ENCODE JSON metadata objects are requested. No Modal run is needed.
 
-    uv run python experiments/stage2_processed_lineage.py
+    uv run python -m experiments.stage2_processed_lineage
 """
 
 from __future__ import annotations
@@ -17,7 +17,7 @@ from datetime import datetime, timezone
 import json
 from pathlib import Path
 
-from stage2_encode_replicate_inventory import (
+from experiments.stage2_encode_replicate_inventory import (
     accession_from_link,
     fetch_json,
     normalize_replicates,
