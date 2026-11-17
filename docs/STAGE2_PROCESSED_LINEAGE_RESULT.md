@@ -60,3 +60,32 @@ this metadata audit. Earlier verified BAM file sizes were 159,057,417,163
 and 782,504,438,499 bytes (approximately 942 GB total). Before any
 large Modal transfer or computation, require a documented pair-reconstruction
 protocol, quality criteria, resource budget and validation plan.
+
+## Step 402: submitted-file paths clarify previously unresolved matrices
+
+The user inspected the locally saved metadata JSON. These **released,
+GRCh38** files in `ENCSR477GZK` have the following submitted names:
+
+- `ENCFF743HCX`: `.../HCT-116/untreated/ENCODE_18cell/combined/total/inter_30.hic`,
+  alias `erez-aiden:intact-HCT116-hic30map`
+- `ENCFF876NPA`: `.../HCT-116/untreated/ENCODE_18cell/combined/total/inter.hic`,
+  alias `erez-aiden:intact-HCT116-hic1map`
+
+`combined/total` is strong **file-path evidence** for pooled rather
+than replicate-separated maps, but no corresponding direct
+`derived_from` ancestry was supplied for these two files. The Juicer
+filenames `inter.hic` versus `inter_30.hic` conventionally refer to
+MAPQ >0 and MAPQ >=30 filtering; **these are not two biological
+replicates**.
+
+Primary reference:
+https://www.encodeproject.org/hic/
+Juicer documentation:
+https://github.com/aidenlab/JuicerTools/blob/master/Juicer.README
+
+Therefore the four analyzed `.hic` products do not supply a
+verified **pair of independent replicate-specific contact maps** for
+the original ENCODE sample. Before reprocessing nearly a terabyte of
+replicate alignments, investigate smaller externally published
+HCT116 untreated control replicates, as tracked in
+[STAGE2_EXTERNAL_HCT116_REPLICATES.md](STAGE2_EXTERNAL_HCT116_REPLICATES.md).
