@@ -15,11 +15,11 @@ from urllib.request import Request, urlopen
 
 from experiments.stage2_external_hic_range_check import SAMPLES, geo_file_url
 
-PREFIX_BYTES = 65536
+PREFIX_BYTES = 262144
 TOTAL_BYTE_LIMIT = 4 * PREFIX_BYTES
-MAX_STRING_BYTES = 4096
+MAX_STRING_BYTES = PREFIX_BYTES
 TARGET_END = 21_000_000
-DESTINATION = Path("research_artifacts/stage2/hct116_external_hic_resolution_audit_v1.json")
+DESTINATION = Path("research_artifacts/stage2/hct116_external_hic_resolution_audit_v2.json")
 
 
 class InvalidHicHeader(ValueError):
@@ -46,7 +46,7 @@ class HeaderReader:
     def cstring(self) -> str:
         end = self.data.find(b"\0", self.offset, min(len(self.data), self.offset + MAX_STRING_BYTES))
         if end < 0:
-            raise InvalidHicHeader("Missing/oversize header string")
+            raise InvalidHicHeader(f"Unterminated header string or prefix budget exceeded at offset {self.offset}")
         raw = self.take(end - self.offset + 1)[:-1]
         try:
             return raw.decode("utf-8")
@@ -163,7 +163,7 @@ def build_report(*, opener=urlopen) -> dict:
         "study": "GSE310051 HCT116 WT untreated 0h",
         "timestamp_utc": datetime.now(timezone.utc).isoformat(),
         "max_bytes_per_file": PREFIX_BYTES,
-        "maximum_total_payload_bytes": TOTAL_BYTE_LIMIT,
+        "maximum_total_payload_bytes": TOTAL_BYTE_LIMIT,\n        "revision": "v2: expanded bounded prefix for potentially long Juicer metadata strings",
         "full_hic_files_downloaded": False,
         "contact_data_analyzed": False,
         "biological_replication_tested": False,
